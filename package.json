@@ -1,0 +1,31 @@
+{
+  "name": "htl-csharp",
+  "version": "0.1.0",
+  "description": "Material for C# at HTL Perg",
+  "main": "index.html",
+  "dependencies": {},
+  "devDependencies": {
+    "concurrently": "^3.5.0",
+    "del": "^3.0.0",
+    "gulp": "^3.9.1",
+    "gulp-ssi": "^0.1.3",
+    "jquery": "^3.2.1",
+    "reveal.js": "^3.5.0",
+    "serve": "^6.0.2"
+  },
+  "scripts": {
+    "clean": "gulp clean",
+    "build": "gulp clean && gulp",
+    "start": "gulp clean && concurrently \"gulp watch\" \"serve dist\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rstropek/htl-csharp.git"
+  },
+  "author": "Rainer Stropek",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rstropek/htl-csharp/issues"
+  },
+  "homepage": "https://github.com/rstropek/htl-csharp#readme"
+}

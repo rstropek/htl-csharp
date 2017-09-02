@@ -25,7 +25,7 @@
 | 18. Jan. 2018  | Written exam
 | 25. Jan. 2018  | Discuss exam results
 | 01. Feb. 2018  | Oral exams
-| 08. Feb. 2018  | [DevOps](https://en.wikipedia.org/wiki/DevOps), [Continuous Integration](https://www.visualstudio.com/team-services/continuous-integration/)
+| 08. Feb. 2018  | Oral exams, [DevOps](https://en.wikipedia.org/wiki/DevOps), [Continuous Integration](https://www.visualstudio.com/team-services/continuous-integration/)
 | 15. Feb. 2018  | [Microservices](https://martinfowler.com/articles/microservices.html) architecture pattern
 | 22. Feb. 2018  | **Semester Break (*Semesterferien*)**
 | 01. Mar. 2018  | [XAML](https://github.com/Microsoft/xaml-standard) and [WPF](https://docs.microsoft.com/en-us/dotnet/framework/wpf/getting-started/) fundamentals
@@ -47,3 +47,25 @@
 | 21. June 2018  | n.a.
 | 28. June 2018  | n.a.
 | 05. July 2018  | n.a.
+
+## Lightning Talks
+
+| Date           | Presenter | Topic
+|----------------|-----------|-------
+| 21. Sept. 2017 |           | 
+| 28. Sept. 2017 |           |
+| 05. Oct. 2017  |           |
+| 12. Oct. 2017  |           |
+| 19. Oct. 2017  |           |
+| 16. Nov. 2017  |           |
+| 23. Nov. 2017  |           |
+| 30. Nov. 2017  |           |
+| 07. Dec. 2017  |           |
+| 14. Dec. 2017  |           |
+| 21. Dec. 2017  |           |
+| 11. Jan. 2018  |           |
+| 15. Feb. 2018  |           |
+| 01. Mar. 2018  |           |
+| 15. Mar. 2018  |           |
+| 22. Mar. 2018  |           |
+| 05. Apr. 2018  |           |
