@@ -1,30 +1,14 @@
 ﻿using System;
+using System.Collections;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace Tetris
 {
     public class Board
     {
-        // QUIZ:
-        //   1. What does `const` mean?
-        //   2. Which data types can be `const`?
-        // LEARN MORE at https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/const
-        public const int BOARD_WIDTH = 20;
-        public const int BOARD_HEIGHT = 25;
-        public const int BORDER_LEFT = 5;
-        public const int BORDER_TOP = 2;
-        public const ConsoleColor BORDER_COLOR = ConsoleColor.Yellow;
-        public const ConsoleColor BACKGROUND_COLOR = ConsoleColor.Black;
-
-        // QUIZ: 
-        //   1. Do we need to initialize the content of bool array in `BoardContent`?
-        //   2. What is the content if we do not initialize the bool array?
-        // LEARN MORE at https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/arrays/#array-overview
-        private readonly bool[,] BoardContent = new bool[BOARD_HEIGHT, BOARD_WIDTH];
-
-        // QUIZ: Note expression-bodied getter here. What else can you do with expression bodies?
-        // LEARN MORE at https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/statements-expressions-operators/expression-bodied-members
-        public bool this[int row, int col] { get => this.BoardContent[row, col]; }
+        private IBoardContent BoardContent;
+        private RandomPieceGenerator PieceGenerator;
 
         // QUIZ: What does `auto-implemented property` mean?
         // LEARN MORE at https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/auto-implemented-properties
@@ -33,13 +17,50 @@ namespace Tetris
         public Piece CurrentPiece { get; private set; } = null;
         public Piece NextPiece { get; private set; } = null;
 
+        // QUIZ: What does the `= null` assignment mean in the parameter list?
+        // LEARN MORE at https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/named-and-optional-arguments#optional-arguments
+        public Board(IBoardContent content, RandomPieceGenerator pieceGenerator = null)
+        {
+            BoardContent = content;
+            PieceGenerator = pieceGenerator;
+        }
+
         public void NewPiece()
         {
             // QUIZ: What does `??` mean in the next line of code?
             // LEARN MORE at https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/null-conditional-operator
-            CurrentPiece = NextPiece ?? Pieces.GetRandomPiece();
-            NextPiece = Pieces.GetRandomPiece();
-            MergeCurrentPieceIntoBoardContent(0, (Board.BOARD_WIDTH - CurrentPiece.Pattern.GetLength(0)) / 2);
+            CurrentPiece = NextPiece ?? PieceGenerator();
+            NextPiece = PieceGenerator();
+
+            // Set initial position
+            CurrentRow = 0;
+            CurrentCol = (BoardContent.Width - CurrentPiece.Width) / 2;
+
+            if (!CanMergePatternIntoBoardContent(CurrentRow, CurrentCol, CurrentPiece.Pattern))
+            {
+                // Initial position already occupied -> GAME OVER
+                throw new BoardException();
+            }
+        }
+
+        public void DropPiece()
+        {
+            // Start in current row
+            var row = CurrentRow;
+
+            // Find first row which is already occupied
+            for (; row <= BoardContent.Height - CurrentPiece.Height; row++)
+            {
+                if (!CanMergePatternIntoBoardContent(row, CurrentCol, CurrentPiece.Pattern))
+                {
+                    // Occupied row found -> piece has to land one row above
+                    CurrentRow = row - 1;
+                    return;
+                }
+            }
+
+            // No row occupied -> place piece in lowest row
+            CurrentRow = row - 1;
         }
 
         // QUIZ: How is the C# concept called that enables queries like `Where` and `Any`?
@@ -50,11 +71,73 @@ namespace Tetris
                 .Where(item => item.val)
                 .Any(item => item.val && BoardContent[targetRow + item.row, targetCol + item.col]);
 
+        public bool IsMovePossible(Direction direction)
+        {
+            switch (direction)
+            {
+                case Direction.Down:
+                    // QUIZ: Will `CanMergePatternIntoBoardContent` be called if bottom has already been reached?
+                    // LEARN MORE at https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/conditional-or-operator
+                    return !((CurrentRow + CurrentPiece.Height) == BoardContent.Height ||
+                        !CanMergePatternIntoBoardContent(CurrentRow + 1, CurrentCol, CurrentPiece.Pattern));
+                case Direction.Left:
+                    return !(CurrentCol == 0 || !CanMergePatternIntoBoardContent(CurrentRow, CurrentCol - 1, CurrentPiece.Pattern));
+                case Direction.Right:
+                    return !((CurrentCol + CurrentPiece.Width) == BoardContent.Width ||
+                        !CanMergePatternIntoBoardContent(CurrentRow, CurrentCol + 1, CurrentPiece.Pattern));
+                default:
+                    // QUIZ: Does this make sense? `direction` cannot be anything but down, left or right, can it?
+                    // LEARN MORE at https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/enum#robust-programming
+                    throw new InvalidOperationException();
+            }
+        }
+
+        public bool TryRotatePiece(RotationDirection direction)
+        {
+            var rotatedPiece = CurrentPiece.GetRotatedPiece(direction);
+            if ((CurrentRow + rotatedPiece.Height) > BoardContent.Height
+                || (CurrentCol + CurrentPiece.Width) > BoardContent.Width)
+            {
+                return false;
+            }
+
+            var newCol = CurrentCol + (CurrentPiece.Width - rotatedPiece.Width) / 2;
+
+            if (CanMergePatternIntoBoardContent(CurrentRow, newCol, rotatedPiece.Pattern))
+            {
+                CurrentPiece = rotatedPiece;
+                CurrentCol = newCol;
+                return true;
+            }
+
+            return false;
+        }
+
+        public bool TryMove(Direction direction)
+        {
+            if (IsMovePossible(direction))
+            {
+                if (direction == Direction.Down)
+                {
+                    CurrentRow++;
+                }
+                else
+                {
+                    // Note type case for enum in the next line of code
+                    CurrentCol += (int)direction;
+                }
+
+                return true;
+            }
+
+            return false;
+        }
+
         // QUIZ: Why is the following method called `Try...`?
         // LEARN MORE at https://docs.microsoft.com/en-us/dotnet/standard/design-guidelines/exceptions-and-performance#try-parse-pattern
         public bool TryMergingPatternIntoBoardContent(int targetRow, int targetCol, bool[,] pattern)
         {
-            if (CanMergePatternIntoBoardContent(targetRow, targetCol, pattern))
+            if (!CanMergePatternIntoBoardContent(targetRow, targetCol, pattern))
             {
                 return false; // Indicate error
             }
@@ -78,6 +161,8 @@ namespace Tetris
                 throw new BoardException();
             }
         }
+
+        public void MergeCurrentPieceIntoBoardContent() => MergeCurrentPieceIntoBoardContent(CurrentRow, CurrentCol);
 
         public void MergeCurrentPieceIntoBoardContent(int targetRow, int targetCol)
             => MergePatternIntoBoardContent(targetRow, targetCol, CurrentPiece.Pattern);

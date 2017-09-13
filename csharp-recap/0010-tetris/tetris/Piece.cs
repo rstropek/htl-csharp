@@ -22,14 +22,37 @@ namespace Tetris
         /// </remarks>
         public Piece(ConsoleColor color, bool[,] pattern)
         {
-            this.Color = color;
-            this.Pattern = pattern;
+            Color = color;
+            Pattern = pattern;
         }
 
         // QUIZ: Note that there is no setter.
         //   1. Why can we still set the value of `Color` in the constructor?
         public ConsoleColor Color { get; }
         public bool[,] Pattern { get; }
+
+        public Piece GetRotatedPiece(RotationDirection direction)
+        {
+            var rotatedPattern = new bool[Pattern.GetLength(1), Pattern.GetLength(0)];
+            foreach(var pixel in Pattern.ToEnumerable())
+            {
+                if (direction == RotationDirection.Clockwise)
+                {
+                    rotatedPattern[pixel.col, rotatedPattern.GetLength(1) - 1 - pixel.row] = pixel.val;
+                }
+                else
+                {
+                    rotatedPattern[rotatedPattern.GetLength(0) - 1 - pixel.col, pixel.row] = pixel.val;
+                }
+            }
+
+            return new Piece(Color, rotatedPattern);
+        }
+
+        public int Width { get => Pattern.GetLength(1); }
+
+        public int Height { get => Pattern.GetLength(0); }
+
     }
 
     // QUIZ:

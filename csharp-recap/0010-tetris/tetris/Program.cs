@@ -1,13 +1,21 @@
 ﻿using System;
-using System.Linq;
-using System.Collections.Generic;
-using System.Threading;
 using System.Diagnostics;
 
 namespace Tetris
 {
     class Program
     {
+        // QUIZ:
+        //   1. What does `const` mean?
+        //   2. Which data types can be `const`?
+        // LEARN MORE at https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/const
+        public const int BOARD_WIDTH = 20;
+        public const int BOARD_HEIGHT = 10;
+        public const int BORDER_LEFT = 5;
+        public const int BORDER_TOP = 2;
+        public const ConsoleColor BORDER_COLOR = ConsoleColor.Yellow;
+        public const ConsoleColor BACKGROUND_COLOR = ConsoleColor.Black;
+
         static void Main(string[] args)
         {
             Console.Clear();
@@ -15,90 +23,73 @@ namespace Tetris
 
             DrawBorders2();
 
-            var board = new Board();
+            var board = new Board(new BoardContent(BOARD_HEIGHT, BOARD_WIDTH), Pieces.GetRandomPiece);
             board.NewPiece();
-            while (true)
+            DrawPiece(board.CurrentCol, board.CurrentRow, board.CurrentPiece.Color, board.CurrentPiece.Pattern);
+
+            try
             {
-                if (board.CurrentPiece == null)
+                while (true)
                 {
-                    board.currentPiece = Pieces.AllPieces[new Random().Next(Pieces.AllPieces.Count)];
-
-                    // QUIZ: What isn't optimal in the previous line of code 
-                    //   in terms of performance?
-
-                    board.currentRow = 0;
-                    board.currentCol = (Board.BOARD_WIDTH - board.CurrentPiece.Pattern.GetLength(0)) / 2;
-                }
-                else
-                {
-                    if (HasReachedBottom(board.currentRow, board.CurrentCol, board.CurrentPiece.Pattern))
+                    var dropped = false;
+                    for (var watch = Stopwatch.StartNew(); watch.ElapsedMilliseconds < 1000;)
                     {
-                        board.MergePieceIntoBoardContent(board.currentRow, board.CurrentCol, board.CurrentPiece.Pattern);
-                        board.currentPiece = Pieces.AllPieces[new Random().Next(Pieces.AllPieces.Count)];
-                        board.currentRow = 0;
-                        board.currentCol = (Board.BOARD_WIDTH - board.CurrentPiece.Pattern.GetLength(0)) / 2;
+                        if (Console.KeyAvailable)
+                        {
+                            var pressedKey = Console.ReadKey();
+                            var previousCol = board.CurrentCol;
+                            var previousRow = board.CurrentRow;
+                            var previousPattern = board.CurrentPiece.Pattern;
+                            switch (pressedKey.Key)
+                            {
+                                // QUIZ: What does the `when` keyword do in the following line of code?
+                                // LEARN MORE at https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/when#when-in-a-switch-statement
+                                case ConsoleKey.LeftArrow when (pressedKey.Modifiers & ConsoleModifiers.Control) != 0:
+                                    board.TryRotatePiece(RotationDirection.CounterClockwise);
+                                    break;
+                                case ConsoleKey.RightArrow when (pressedKey.Modifiers & ConsoleModifiers.Control) != 0:
+                                    board.TryRotatePiece(RotationDirection.Clockwise);
+                                    break;
+                                case ConsoleKey.LeftArrow:
+                                    board.TryMove(Direction.Left);
+                                    break;
+                                case ConsoleKey.RightArrow:
+                                    board.TryMove(Direction.Right);
+                                    break;
+                                case ConsoleKey.Spacebar when !dropped:
+                                    board.DropPiece();
+                                    dropped = true;
+                                    break;
+                            }
+
+                            if (previousCol != board.CurrentCol || previousRow != board.CurrentRow || previousPattern != board.CurrentPiece.Pattern)
+                            {
+                                DrawPiece(previousCol, previousRow, BACKGROUND_COLOR, previousPattern);
+                                DrawPiece(board.CurrentCol, board.CurrentRow, board.CurrentPiece.Color, board.CurrentPiece.Pattern);
+                            }
+                        }
+                    }
+
+                    if (!board.IsMovePossible(Direction.Down) || dropped)
+                    {
+                        board.MergeCurrentPieceIntoBoardContent();
+                        board.NewPiece();
                     }
                     else
                     {
-                        DrawPiece(board.CurrentCol, board.currentRow, Board.BACKGROUND_COLOR, board.CurrentPiece.Pattern);
-                        board.currentRow++;
+                        DrawPiece(board.CurrentCol, board.CurrentRow, BACKGROUND_COLOR, board.CurrentPiece.Pattern);
+                        board.TryMove(Direction.Down);
                     }
+
+                    DrawPiece(board.CurrentCol, board.CurrentRow, board.CurrentPiece.Color, board.CurrentPiece.Pattern);
                 }
-
-                DrawPiece(board.CurrentCol, board.currentRow, board.CurrentPiece.Color, board.CurrentPiece.Pattern);
-
-                for (var watch = Stopwatch.StartNew(); watch.ElapsedMilliseconds < 1000;)
-                {
-                    if (Console.KeyAvailable)
-                    {
-                        var pressedKey = Console.ReadKey();
-                        var previousCol = board.CurrentCol;
-                        switch (pressedKey.Key)
-                        {
-                            case ConsoleKey.LeftArrow when board.CurrentCol > 0:
-                                board.currentCol--;
-                                break;
-                            case ConsoleKey.RightArrow when (board.CurrentCol + board.CurrentPiece.Pattern.GetLength(1)) < Board.BOARD_WIDTH:
-                                board.currentCol++;
-                                break;
-                        }
-
-                        if (previousCol != board.CurrentCol)
-                        {
-                            DrawPiece(previousCol, board.currentRow, Board.BACKGROUND_COLOR, board.CurrentPiece.Pattern);
-                            DrawPiece(board.CurrentCol, board.currentRow, board.CurrentPiece.Color, board.CurrentPiece.Pattern);
-                        }
-                    }
-                }
+            }
+            catch (BoardException)
+            {
+                Console.WriteLine("GAME OVER");
             }
 
             Console.ReadKey();
-        }
-
-        private static bool HasReachedBottom(int currentRow, int currentCol, bool[,] pattern)
-        {
-            if ((currentRow + pattern.GetLength(0)) == Board.BOARD_HEIGHT)
-            {
-                return true;
-            }
-
-            return !IsSpaceAvailable(currentRow + 1, currentCol, pattern);
-        }
-
-        private static bool IsSpaceAvailable(int currentRow, int currentCol, bool[,] pattern)
-        {
-            //for (var row = 0; row < pattern.GetLength(0); row++)
-            //{
-            //    for (var col = 0; col < pattern.GetLength(1); col++)
-            //    {
-            //        if (pattern[row, col] && BoardContent[currentRow + row, currentCol + col])
-            //        {
-            //            return false;
-            //        }
-            //    }
-            //}
-
-            return true;
         }
 
         private static void DrawBorders()
@@ -107,29 +98,29 @@ namespace Tetris
             try
             {
                 // Move cursor to upper left corner
-                Console.SetCursorPosition(Board.BORDER_LEFT, Board.BORDER_TOP);
-                while (Console.CursorTop < Board.BORDER_TOP + Board.BOARD_HEIGHT + 1)
+                Console.SetCursorPosition(BORDER_LEFT, BORDER_TOP);
+                while (Console.CursorTop < BORDER_TOP + BOARD_HEIGHT + 1)
                 {
                     // Draw left border line
-                    Console.BackgroundColor = Board.BORDER_COLOR;
+                    Console.BackgroundColor = BORDER_COLOR;
                     Console.Write(' ');
 
-                    if (Console.CursorTop != Board.BORDER_TOP + Board.BOARD_HEIGHT)
+                    if (Console.CursorTop != BORDER_TOP + BOARD_HEIGHT)
                     {
                         // We have not reached the last line with the bottom border line yet.
                         // Therefore we need to use the background color or the board.
-                        Console.BackgroundColor = Board.BACKGROUND_COLOR;
+                        Console.BackgroundColor = BACKGROUND_COLOR;
                     }
 
                     // Draw board background or (in the last line) bottom border
-                    Console.Write(" ".PadLeft(Board.BOARD_WIDTH)); // QUIZ: What does PadLef do?
+                    Console.Write(" ".PadLeft(BOARD_WIDTH)); // QUIZ: What does PadLef do?
 
                     // Draw right border line
-                    Console.BackgroundColor = Board.BORDER_COLOR;
+                    Console.BackgroundColor = BORDER_COLOR;
                     Console.Write(' ');
 
                     // Move to next line
-                    Console.SetCursorPosition(Board.BORDER_LEFT, Console.CursorTop + 1);
+                    Console.SetCursorPosition(BORDER_LEFT, Console.CursorTop + 1);
                 }
 
                 // QUIZ: What is faster:
@@ -154,23 +145,23 @@ namespace Tetris
         {
             RestoreOriginalState(() =>
             {
-                Console.SetCursorPosition(Board.BORDER_LEFT, Board.BORDER_TOP);
-                while (Console.CursorTop < Board.BORDER_TOP + Board.BOARD_HEIGHT + 1)
+                Console.SetCursorPosition(BORDER_LEFT, BORDER_TOP);
+                while (Console.CursorTop < BORDER_TOP + BOARD_HEIGHT + 1)
                 {
-                    Console.BackgroundColor = Board.BORDER_COLOR;
+                    Console.BackgroundColor = BORDER_COLOR;
                     Console.Write(' ');
 
-                    if (Console.CursorTop != Board.BORDER_TOP + Board.BOARD_HEIGHT)
+                    if (Console.CursorTop != BORDER_TOP + BOARD_HEIGHT)
                     {
-                        Console.BackgroundColor = Board.BACKGROUND_COLOR;
+                        Console.BackgroundColor = BACKGROUND_COLOR;
                     }
 
-                    Console.Write(" ".PadLeft(Board.BOARD_WIDTH));
+                    Console.Write(" ".PadLeft(BOARD_WIDTH));
 
-                    Console.BackgroundColor = Board.BORDER_COLOR;
+                    Console.BackgroundColor = BORDER_COLOR;
                     Console.Write(' ');
 
-                    Console.SetCursorPosition(Board.BORDER_LEFT, Console.CursorTop + 1);
+                    Console.SetCursorPosition(BORDER_LEFT, Console.CursorTop + 1);
                 }
             });
         }
@@ -201,7 +192,7 @@ namespace Tetris
                 Console.BackgroundColor = color;
                 for (var row = 0; row < pattern.GetLength(0); row++)
                 {
-                    Console.SetCursorPosition(Board.BORDER_LEFT + 1 + left, Board.BORDER_TOP + top + row);
+                    Console.SetCursorPosition(BORDER_LEFT + 1 + left, BORDER_TOP + top + row);
 
                     // QUIZ: What isn't optimal in the previous line of code 
                     //   in terms of performance?

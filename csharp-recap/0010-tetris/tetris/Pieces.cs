@@ -43,8 +43,14 @@ namespace Tetris
             new Piece(ConsoleColor.Green, Z)
         };
 
-        // QUIZ: Note expression-bodied function here. What else can you do with expression bodies?
-        // LEARN MORE at https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/statements-expressions-operators/expression-bodied-members
-        public static Piece GetRandomPiece() => Pieces.AllPieces[new Random().Next(Pieces.AllPieces.Count)];
+        public static Piece GetRandomPiece()
+        {
+            var template = Pieces.AllPieces[new Random().Next(Pieces.AllPieces.Count)];
+
+            // QUIZ: According to the docs, `Clone` creates a shallow copy.
+            //   1. What does 'shallow' mean?
+            //   2. What is the opposite of 'shallow' in this context?
+            return new Piece(template.Color, (bool[,])template.Pattern.Clone());
+        }
     }
 }
