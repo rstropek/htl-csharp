@@ -26,6 +26,7 @@ Here are suggestions for [lightning talk](https://en.wikipedia.org/wiki/Lightnin
     1. What is [*NLog*](http://nlog-project.org/) and why is it useful for .NET developers?
     1. What can we learn from the [*.NET Foundation Coding Guidelines*](https://github.com/dotnet/corefx/blob/master/Documentation/coding-guidelines/coding-style.md)?
     1. What are Microsoft's [*Framework Design Guidelines*](https://docs.microsoft.com/en-us/dotnet/standard/design-guidelines/) and what can we learn from them?
+    1. What is [*moq*](https://github.com/moq/moq4) and why is it useful for automated testing?
 1. Architecture
     1. What is [*Event Sourcing*](https://martinfowler.com/eaaDev/EventSourcing.html) and why can it be useful?
     1. What is [*CQRS*](https://martinfowler.com/bliki/CQRS.html) and why can it be useful?
