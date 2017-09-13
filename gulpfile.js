@@ -27,7 +27,7 @@ gulp.task('copy-presentation', () => {
   gulp.src('*.css').pipe(gulp.dest('dist/css'));
   gulp.src(['headers.js']).pipe(gulp.dest('dist/js'));
   gulp.src('images/**/*').pipe(gulp.dest('dist/images'));
-  gulp.src('*.md').pipe(ssi()).pipe(gulp.dest('dist'));
+  gulp.src(['*.md', '!README.md']).pipe(ssi()).pipe(gulp.dest('dist'));
 });
 
 gulp.task('default', ['copy-presentation', 'copy-reveal', 'copy-jquery']);
