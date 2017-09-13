@@ -22,16 +22,20 @@ namespace Tetris
             Console.CursorVisible = false;
 
             DrawBorders2();
+            PrintUsage();
 
             var board = new Board(new BoardContent(BOARD_HEIGHT, BOARD_WIDTH), Pieces.GetRandomPiece);
             board.NewPiece();
             DrawPiece(board.CurrentCol, board.CurrentRow, board.CurrentPiece.Color, board.CurrentPiece.Pattern);
+            DrawPiece(BOARD_WIDTH + 12, 3, board.NextPiece.Color, board.NextPiece.Pattern);
 
             try
             {
                 while (true)
                 {
                     var dropped = false;
+
+                    // Note using `Stopwatch` instead of `DateTime.Now`
                     for (var watch = Stopwatch.StartNew(); watch.ElapsedMilliseconds < 1000;)
                     {
                         if (Console.KeyAvailable)
@@ -73,7 +77,9 @@ namespace Tetris
                     if (!board.IsMovePossible(Direction.Down) || dropped)
                     {
                         board.MergeCurrentPieceIntoBoardContent();
+                        DrawPiece(BOARD_WIDTH + 12, 3, BACKGROUND_COLOR, board.NextPiece.Pattern);
                         board.NewPiece();
+                        DrawPiece(BOARD_WIDTH + 12, 3, board.NextPiece.Color, board.NextPiece.Pattern);
                     }
                     else
                     {
@@ -181,6 +187,37 @@ namespace Tetris
 
                     Console.SetCursorPosition(BORDER_LEFT, Console.CursorTop + 1);
                 }
+            });
+        }
+
+        private static void PrintUsage()
+        {
+            RestoreOriginalState(() =>
+            {
+                Console.ForegroundColor = BORDER_COLOR;
+
+                // QUIZ: What's that? A function inside a function?!
+                // LEARN MORE at https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/local-functions
+                void WriteAt(int left, int top, string text)
+                {
+                    Console.SetCursorPosition(left, top);
+                    Console.Write(text);
+                }
+
+
+                var usageLeft = BORDER_LEFT + BOARD_WIDTH + 10;
+                var usageTop = BORDER_TOP + 10;
+
+                WriteAt(usageLeft, BORDER_TOP + 1, "Next Piece:");
+
+                WriteAt(usageLeft, usageTop++, "===============");
+                WriteAt(usageLeft, usageTop++, "  T E T R I S");
+                WriteAt(usageLeft, usageTop++, "===============");
+                usageTop++;
+
+                WriteAt(usageLeft, usageTop++, "Use left/right to move piece");
+                WriteAt(usageLeft, usageTop++, "Use ctrl + left/right keys to rotate");
+                WriteAt(usageLeft, usageTop++, "Use space bar to drop");
             });
         }
 
