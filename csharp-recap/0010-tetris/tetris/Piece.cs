@@ -26,16 +26,18 @@ namespace Tetris
             Pattern = pattern;
         }
 
-        // QUIZ: Note that there is no setter.
-        //   1. Why can we still set the value of `Color` in the constructor?
+        // QUIZ: Note that there is no setter. 
+        //   Why can we still set the value of `Color` in the constructor?
         public ConsoleColor Color { get; }
         public bool[,] Pattern { get; }
 
         public Piece GetRotatedPiece(RotationDirection direction)
         {
-            var rotatedPattern = new bool[Pattern.GetLength(1), Pattern.GetLength(0)];
+            // During rotation, width becomes height and height becomes width
+            var rotatedPattern = new bool[Width, Height];
             foreach(var pixel in Pattern.ToEnumerable())
             {
+                // QUIZ: What isn't optimal in terms of performance with this `if`?
                 if (direction == RotationDirection.Clockwise)
                 {
                     rotatedPattern[pixel.col, rotatedPattern.GetLength(1) - 1 - pixel.row] = pixel.val;
@@ -52,7 +54,6 @@ namespace Tetris
         public int Width { get => Pattern.GetLength(1); }
 
         public int Height { get => Pattern.GetLength(0); }
-
     }
 
     // QUIZ:

@@ -6,6 +6,8 @@
         //   1. Do we need to initialize the content of bool array in `BoardContent`?
         //   2. What is the content if we do not initialize the bool array?
         // LEARN MORE at https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/arrays/#array-overview
+
+        // QUIZ: Why is `content` private? Wouldn't it be easier to make it public?
         private readonly bool[,] content;
 
         public BoardContent(int height, int width)

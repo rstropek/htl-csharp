@@ -4,27 +4,34 @@ using System;
 namespace Tetris.Tests
 {
     [TestClass]
-    public class IsMovePossibleTest
+    public class MovementTest
     {
         [TestMethod]
-        [TestCategory(nameof(Board.IsMovePossible))]
         public void TestSuccessfulMoves()
         {
-            var boardContent = new BoardContentMockup { Content = new bool[,] { { false, false, false }, { false, false, false } } };
-            var board = new Board(boardContent, () => new Piece(ConsoleColor.White, PiecesMockup.SinglePixel));
+            var boardContent = new BoardContentMockup(new bool[,] { { false, false, false }, { false, false, false } });
+            var board = new Board(boardContent, PiecesMockup.SinglePixelGenerator);
             board.NewPiece();
 
             Assert.IsTrue(board.IsMovePossible(Direction.Down));
             Assert.IsTrue(board.IsMovePossible(Direction.Left));
             Assert.IsTrue(board.IsMovePossible(Direction.Right));
+
+            Assert.IsTrue(board.TryMove(Direction.Down));
+            Assert.AreEqual(board.CurrentRow, 1);
+
+            Assert.IsTrue(board.TryMove(Direction.Left));
+            Assert.AreEqual(board.CurrentCol, 0);
+
+            Assert.IsTrue(board.TryMove(Direction.Right));
+            Assert.AreEqual(board.CurrentRow, 1);
         }
 
         [TestMethod]
-        [TestCategory(nameof(Board.IsMovePossible))]
         public void TestFailingMoves()
         {
-            var boardContent = new BoardContentMockup { Content = new bool[,] { { true, false, true }, { false, true, false } } };
-            var board = new Board(boardContent, () => new Piece(ConsoleColor.White, PiecesMockup.SinglePixel));
+            var boardContent = new BoardContentMockup(new bool[,] { { true, false, true }, { false, true, false } });
+            var board = new Board(boardContent, PiecesMockup.SinglePixelGenerator);
             board.NewPiece();
 
             Assert.IsFalse(board.IsMovePossible(Direction.Down));
@@ -33,11 +40,10 @@ namespace Tetris.Tests
         }
 
         [TestMethod]
-        [TestCategory(nameof(Board.IsMovePossible))]
         public void TestFailingMovesOutsideBounds()
         {
-            var boardContent = new BoardContentMockup { Content = new bool[,] { { false } } };
-            var board = new Board(boardContent, () => new Piece(ConsoleColor.White, PiecesMockup.SinglePixel));
+            var boardContent = new BoardContentMockup(new bool[,] { { false } });
+            var board = new Board(boardContent, PiecesMockup.SinglePixelGenerator);
             board.NewPiece();
 
             Assert.IsFalse(board.IsMovePossible(Direction.Down));

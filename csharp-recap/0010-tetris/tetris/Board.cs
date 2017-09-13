@@ -151,9 +151,6 @@ namespace Tetris
             return true; // Indicate success
         }
 
-        public bool TryMergingCurrentPieceIntoBoardContent(int targetRow, int targetCol)
-            => TryMergingPatternIntoBoardContent(targetRow, targetCol, CurrentPiece.Pattern);
-
         public void MergePatternIntoBoardContent(int targetRow, int targetCol, bool[,] pattern)
         {
             if (!TryMergingPatternIntoBoardContent(targetRow, targetCol, pattern))
@@ -162,9 +159,7 @@ namespace Tetris
             }
         }
 
-        public void MergeCurrentPieceIntoBoardContent() => MergeCurrentPieceIntoBoardContent(CurrentRow, CurrentCol);
-
-        public void MergeCurrentPieceIntoBoardContent(int targetRow, int targetCol)
-            => MergePatternIntoBoardContent(targetRow, targetCol, CurrentPiece.Pattern);
+        public void MergeCurrentPieceIntoBoardContent() => 
+            MergePatternIntoBoardContent(CurrentRow, CurrentCol, CurrentPiece.Pattern);
     }
 }

@@ -7,11 +7,10 @@ namespace Tetris.Tests
     public class DropPieceTest
     {
         [TestMethod]
-        [TestCategory(nameof(Board.DropPiece))]
         public void TestDroppingPieceEmptyBoard()
         {
-            var boardContent = new BoardContentMockup { Content = new bool[,] { { false }, { false } } };
-            var board = new Board(boardContent, () => new Piece(ConsoleColor.White, PiecesMockup.SinglePixel));
+            var boardContent = new BoardContentMockup(new bool[,] { { false }, { false } });
+            var board = new Board(boardContent, PiecesMockup.SinglePixelGenerator);
             board.NewPiece();
             board.DropPiece();
 
@@ -19,11 +18,10 @@ namespace Tetris.Tests
         }
 
         [TestMethod]
-        [TestCategory(nameof(Board.DropPiece))]
         public void TestDroppingPieceNonEmptyBoard()
         {
-            var boardContent = new BoardContentMockup { Content = new bool[,] { { false }, { false }, { true } } };
-            var board = new Board(boardContent, () => new Piece(ConsoleColor.White, PiecesMockup.SinglePixel));
+            var boardContent = new BoardContentMockup(new bool[,] { { false }, { false }, { true } });
+            var board = new Board(boardContent, PiecesMockup.SinglePixelGenerator);
             board.NewPiece();
             board.DropPiece();
 

@@ -10,7 +10,7 @@ namespace Tetris.Tests
         [TestCategory(nameof(Board.TryRotatePiece))]
         public void TestSuccessfulRotation()
         {
-            var boardContent = new BoardContentMockup { Content = new bool[,] { { false, false, false }, { false, false, false }, { false, false, false } } };
+            var boardContent = new BoardContentMockup(new bool[,] { { false, false, false }, { false, false, false }, { false, false, false } });
             var board = new Board(boardContent, () => new Piece(ConsoleColor.White, PiecesMockup.LBar));
             board.NewPiece();
 
@@ -28,6 +28,27 @@ namespace Tetris.Tests
             {
                 Assert.AreEqual(item.val, PiecesMockup.LBar[item.row, item.col]);
             }
+        }
+
+        [TestMethod]
+        public void TestFailingRotation()
+        {
+            var boardContent = new BoardContentMockup(new bool[,] { { false, false, false }, { false, false, false }, { false, true, false } });
+            var board = new Board(boardContent, () => new Piece(ConsoleColor.White, PiecesMockup.LBar));
+            board.NewPiece();
+
+            Assert.IsFalse(board.TryRotatePiece(RotationDirection.Clockwise));
+            Assert.IsFalse(board.TryRotatePiece(RotationDirection.CounterClockwise));
+        }
+
+        [TestMethod]
+        public void TestFailingRotationOutsideBounds()
+        {
+            var boardContent = new BoardContentMockup(new bool[,] { { false, false, false }, { false, false, false } });
+            var board = new Board(boardContent, () => new Piece(ConsoleColor.White, PiecesMockup.LBar));
+            board.NewPiece();
+
+            Assert.IsFalse(board.TryRotatePiece(RotationDirection.Clockwise));
         }
     }
 }

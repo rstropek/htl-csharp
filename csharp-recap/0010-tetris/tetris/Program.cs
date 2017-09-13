@@ -9,8 +9,8 @@ namespace Tetris
         //   1. What does `const` mean?
         //   2. Which data types can be `const`?
         // LEARN MORE at https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/const
-        public const int BOARD_WIDTH = 20;
-        public const int BOARD_HEIGHT = 10;
+        public const int BOARD_WIDTH = 25;
+        public const int BOARD_HEIGHT = 20;
         public const int BORDER_LEFT = 5;
         public const int BORDER_TOP = 2;
         public const ConsoleColor BORDER_COLOR = ConsoleColor.Yellow;
@@ -141,6 +141,24 @@ namespace Tetris
             }
         }
 
+        // QUIZ: What does 'Action' mean? Discuss 'Func', too.
+        private static void RestoreOriginalState(Action drawingFunc)
+        {
+            var oldBackgroundColor = Console.BackgroundColor;
+            var oldTop = Console.CursorTop;
+            var oldLeft = Console.CursorLeft;
+            try
+            {
+                drawingFunc();
+            }
+            finally
+            {
+                Console.BackgroundColor = oldBackgroundColor;
+                Console.CursorTop = oldTop;
+                Console.CursorLeft = oldLeft;
+            }
+        }
+
         private static void DrawBorders2()
         {
             RestoreOriginalState(() =>
@@ -166,25 +184,6 @@ namespace Tetris
             });
         }
 
-        private static void RestoreOriginalState(Action drawingFunc)
-        {
-            // QUIZ: What does 'Action' mean? Discuss 'Func', too.
-
-            var oldBackgroundColor = Console.BackgroundColor;
-            var oldTop = Console.CursorTop;
-            var oldLeft = Console.CursorLeft;
-            try
-            {
-                drawingFunc();
-            }
-            finally
-            {
-                Console.BackgroundColor = oldBackgroundColor;
-                Console.CursorTop = oldTop;
-                Console.CursorLeft = oldLeft;
-            }
-        }
-
         private static void DrawPiece(int left, int top, ConsoleColor color, bool[,] pattern)
         {
             RestoreOriginalState(() =>
@@ -192,10 +191,8 @@ namespace Tetris
                 Console.BackgroundColor = color;
                 for (var row = 0; row < pattern.GetLength(0); row++)
                 {
+                    // QUIZ: What isn't optimal in the next line of code in terms of performance?
                     Console.SetCursorPosition(BORDER_LEFT + 1 + left, BORDER_TOP + top + row);
-
-                    // QUIZ: What isn't optimal in the previous line of code 
-                    //   in terms of performance?
 
                     for (var col = 0; col < pattern.GetLength(1); col++)
                     {

@@ -7,11 +7,10 @@ namespace Tetris.Tests
     public class NewPieceTest
     {
         [TestMethod]
-        [TestCategory(nameof(Board.NewPiece))]
         public void TestSuccessfulNewPiece()
         {
-            var boardContent = new BoardContentMockup { Content = new bool[,] { { false, false, false }, { false, false, false } } };
-            var board = new Board(boardContent, () => new Piece(ConsoleColor.White, PiecesMockup.SinglePixel));
+            var boardContent = new BoardContentMockup(new bool[,] { { false, false, false }, { false, false, false } });
+            var board = new Board(boardContent, PiecesMockup.SinglePixelGenerator);
             board.NewPiece();
 
             Assert.IsNotNull(board.CurrentPiece);
@@ -21,12 +20,11 @@ namespace Tetris.Tests
         }
 
         [TestMethod]
-        [TestCategory(nameof(Board.NewPiece))]
         [ExpectedException(typeof(BoardException))]
         public void TestFailingNewPiece()
         {
-            var boardContent = new BoardContentMockup { Content = PiecesMockup.SinglePixel };
-            var board = new Board(boardContent, () => new Piece(ConsoleColor.White, PiecesMockup.SinglePixel));
+            var boardContent = new BoardContentMockup(new bool[,] { { true } });
+            var board = new Board(boardContent, PiecesMockup.SinglePixelGenerator);
             board.NewPiece();
         }
     }
