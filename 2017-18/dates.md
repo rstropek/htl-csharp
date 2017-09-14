@@ -60,7 +60,7 @@
 | 16. Nov. 2017  |Karl       | Datenschutzgrundverordnung
 | 23. Nov. 2017  |           |
 | 30. Nov. 2017  |           |
-| 07. Dec. 2017  |           |
+| 07. Dec. 2017  |Schöller   |Subreddits for Developers
 | 14. Dec. 2017  |           |
 | 21. Dec. 2017  |           |
 | 11. Jan. 2018  |           |
