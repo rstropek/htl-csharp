@@ -62,9 +62,9 @@
 | 30. Nov. 2017  |Schörghuber| Free development tools every .NET developer should know about
 | 07. Dec. 2017  |Schöller   |Subreddits for Developers
 | 14. Dec. 2017  |Arbeithuber| C# Scripting
-| 21. Dec. 2017  |           |
+| 21. Dec. 2017  |n.a.       | Munich, Germany
 | 11. Jan. 2018  |Gusi       | Postman
-| 15. Feb. 2018  |           |
+| 15. Feb. 2018  |Wallner    | Markdown
 | 01. Mar. 2018  |           |
 | 15. Mar. 2018  |           |
 | 22. Mar. 2018  |           |
