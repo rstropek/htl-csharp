@@ -55,7 +55,7 @@
 | 21. Sept. 2017 |Gornik     | Microsoft HoloLens
 | 28. Sept. 2017 |           |
 | 05. Oct. 2017  |           |
-| 12. Oct. 2017  |           |
+| 12. Oct. 2017  |Bauer      | Open Data
 | 19. Oct. 2017  | Adami     | Daemon
 | 16. Nov. 2017  |Karl       | Datenschutzgrundverordnung
 | 23. Nov. 2017  | Juster    | Chocolatey
