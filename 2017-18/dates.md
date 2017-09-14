@@ -54,7 +54,7 @@
 |----------------|-----------|-------
 | 21. Sept. 2017 |Gornik     | Microsoft HoloLens
 | 28. Sept. 2017 |           |
-| 05. Oct. 2017  |           |
+| 05. Oct. 2017  |Schalhas   | .NET Foundation
 | 12. Oct. 2017  |Ebner      | Developing in the GitHub Flow
 | 19. Oct. 2017  | Adami     | Daemon
 | 16. Nov. 2017  |Karl       | Datenschutzgrundverordnung
