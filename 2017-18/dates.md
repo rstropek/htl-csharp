@@ -57,7 +57,7 @@
 | 05. Oct. 2017  |           |
 | 12. Oct. 2017  |           |
 | 19. Oct. 2017  | Adami     | Daemon
-| 16. Nov. 2017  |           |
+| 16. Nov. 2017  |Karl       | Datenschutzgrundverordnung
 | 23. Nov. 2017  |           |
 | 30. Nov. 2017  |           |
 | 07. Dec. 2017  |           |
