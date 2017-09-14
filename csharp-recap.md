@@ -180,8 +180,22 @@ private static readonly bool[,] J = { { true, true, true }, { false, false, true
 [*BoardContent.cs*](https://github.com/rstropek/htl-csharp/blob/master/csharp-recap/0010-tetris/tetris/BoardContent.cs)
 
 * [Arrays](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/arrays/#array-overview)
-* Indexer
+* [Indexer](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/indexers/)
 * [Expression-bodied members](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/statements-expressions-operators/expression-bodied-members)
+
+
+<!-- .slide: class="left" -->
+## Indexer and Expression-bodied Members
+
+```
+private readonly bool[,] content;
+...
+public bool this[int row, int col]
+{
+  set => content[row, col] = value;
+  get => content[row, col];
+}
+```
 
 
 <!-- .slide: class="left" -->
@@ -196,6 +210,91 @@ private static readonly bool[,] J = { { true, true, true }, { false, false, true
 * [Custom exceptions](https://docs.microsoft.com/en-us/dotnet/standard/exceptions/how-to-create-user-defined-exceptions) and [`Try...` pattern](https://docs.microsoft.com/en-us/dotnet/standard/design-guidelines/exceptions-and-performance#try-parse-pattern)
 * Enumerations
 * [Delegates](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/delegates/)
+  * See also [*Linq* exercise](https://github.com/rstropek/htl-csharp/tree/master/csharp-recap/0030-linq)
+
+
+<!-- .slide: class="left" -->
+## Auto-implemented Properties
+
+```
+public int CurrentRow { get; private set; } = 0;
+public int CurrentCol { get; private set; } = 0;
+public Piece CurrentPiece { get; private set; } = null;
+```
+
+
+<!-- .slide: class="left" -->
+## Optional Arguments
+
+```
+public Board(IBoardContent content, RandomPieceGenerator pieceGenerator = null)
+{
+  ...
+}
+```
+
+
+<!-- .slide: class="left" -->
+## Custom  Exceptions
+
+```
+public class BoardException : Exception
+{
+  public BoardException() { }
+
+  public BoardException(string message) : base(message) { }
+
+  public BoardException(string message, Exception innerException) : base(message, innerException) { }
+}
+```
+
+
+<!-- .slide: class="left" -->
+## *Try...* Pattern
+
+```
+public bool TryMergingPatternIntoBoardContent(int targetRow, int targetCol, bool[,] pattern)
+{
+  if (/* Check */) {
+      return false; // Indicate error
+  }
+
+  // Do something
+
+  return true; // Indicate success
+}
+
+public void MergePatternIntoBoardContent(int targetRow, int targetCol, bool[,] pattern)
+{
+  if (!TryMergingPatternIntoBoardContent(targetRow, targetCol, pattern)) {
+    throw new BoardException();
+  }
+}
+```
+
+
+<!-- .slide: class="left" -->
+## Enumerations
+
+```
+public enum Direction : int
+{
+  Down = 0,
+  Left = -1,
+  Right = 1
+}
+```
+
+
+<!-- .slide: class="left" -->
+## Delegates
+
+```
+public delegate Piece RandomPieceGenerator();
+...
+public static readonly RandomPieceGenerator SinglePixelGenerator = 
+  () => new Piece(ConsoleColor.White, PiecesMockup.SinglePixel);
+```
 
 
 <!-- .slide: class="left" -->
