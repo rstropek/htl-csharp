@@ -52,7 +52,7 @@
 
 | Date           | Presenter | Topic
 |----------------|-----------|-------
-| 21. Sept. 2017 |           | 
+| 21. Sept. 2017 |Gornik     | Microsoft HoloLens
 | 28. Sept. 2017 |           |
 | 05. Oct. 2017  |           |
 | 12. Oct. 2017  |           |
