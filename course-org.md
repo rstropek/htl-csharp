@@ -3,6 +3,21 @@
 Dates, Lightning Talks, Exams, Grading, etc.
 
 
+## CLIL - Let's Switch to English
+
+* [*Content and Language Integrated Learning*](http://www.htl.at/htlat/schwerpunktportale/clil-content-and-language-integrated-learning.html)
+* Use a foreign language in teaching
+* FAQ
+  * Does CLIL replace English courses? **No**
+  * Will your English skills be graded? **No**
+  * Can you ask questions in German? **Yes, of course**
+  * Can we switch to German if you don't understand my English? **Yes, please ask**
+  * Will written exams be in English? **You can choose**
+  * Will oral exams be in English? **You can choose**
+  * Will CLIL be noted in your course certificate? **No**
+  * Can we stop CLIL if it doesn't work? **Yes, but please give it a try**   
+
+
 <!-- .slide: class="left" -->
 ## Course Organization
 
