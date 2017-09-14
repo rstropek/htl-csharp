@@ -53,6 +53,23 @@ Die Sch&uuml;lerinnen und Sch&uuml;ler k&ouml;nnen
   * Anwendung aktueller Softwaretechnologien, Erstellung von Frameworks, Softwarequalit&auml;t Performance-Tests.
 
 
+## Necessary Software
+
+* We focus on open-source, platform-independent development
+* Use Windows, Linux or Mac
+  * Windows is the most convenient option
+* Development Environment
+  * [*Visual Studio Community Edition*](https://www.visualstudio.com/vs/) on Windows (most convenient option)
+  * [*Visual Studio Code*](https://code.visualstudio.com) on Windows, Linux or Mac
+* If you use VS, install at least the following modules:
+  * *.NET Core cross-platform development*
+  * *ASP.NET and web development*
+  * *.NET desktop development*
+  * *Azure development*
+* If you use VSCode, install [*C#*](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp) plugin
+* Install [*.NET Core SDK*](https://www.microsoft.com/net/download/core)
+
+
 <!-- .slide: class="left" -->
 ## Lessons
 
