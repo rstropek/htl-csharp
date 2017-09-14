@@ -65,7 +65,7 @@
 | 21. Dec. 2017  |Benkner    | What is Net Neutrality and why is it so heavily discussed?
 | 11. Jan. 2018  |Gusi       | Postman
 | 15. Feb. 2018  |Mayr       | Fiddler
-| 01. Mar. 2018  |           |
+| 01. Mar. 2018  |Buchinger  |What are SonarQube and SonarLint?
 | 15. Mar. 2018  |           |
 | 22. Mar. 2018  |           |
 | 05. Apr. 2018  |           |
