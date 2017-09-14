@@ -61,7 +61,7 @@
 | 23. Nov. 2017  | Juster    | Chocolatey
 | 30. Nov. 2017  |Schörghuber| Free development tools every .NET developer should know about
 | 07. Dec. 2017  |Schöller   |Subreddits for Developers
-| 14. Dec. 2017  |           |
+| 14. Dec. 2017  |Arbeithuber| C# Scripting
 | 21. Dec. 2017  |           |
 | 11. Jan. 2018  |           |
 | 15. Feb. 2018  |           |
