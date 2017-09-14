@@ -56,7 +56,7 @@
 | 28. Sept. 2017 |           |
 | 05. Oct. 2017  |Bauer      | Open Data
 | 12. Oct. 2017  |Ebner      | Developing in the GitHub Flow
-| 19. Oct. 2017  | Adami     | Daemon
+| 19. Oct. 2017  | Adami, Leitner     | Daemon, ODAC
 | 16. Nov. 2017  |Karl       | Datenschutzgrundverordnung
 | 23. Nov. 2017  | Juster    | Chocolatey
 | 30. Nov. 2017  |Schörghuber| Free development tools every .NET developer should know about
