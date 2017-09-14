@@ -61,7 +61,7 @@
 | 23. Nov. 2017  |           |
 | 30. Nov. 2017  |           |
 | 07. Dec. 2017  |           |
-| 14. Dec. 2017  |           |
+| 14. Dec. 2017  |Benkner    |What is Net Neutrality and why is it so heavily discussed?
 | 21. Dec. 2017  |           |
 | 11. Jan. 2018  |           |
 | 15. Feb. 2018  |           |
