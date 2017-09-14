@@ -56,12 +56,12 @@
 | 28. Sept. 2017 |           |
 | 05. Oct. 2017  |           |
 | 12. Oct. 2017  |Ebner      | Developing in the GitHub Flow
-| 19. Oct. 2017  |           |
-| 16. Nov. 2017  |           |
-| 23. Nov. 2017  |           |
-| 30. Nov. 2017  |           |
-| 07. Dec. 2017  |           |
-| 14. Dec. 2017  |           |
+| 19. Oct. 2017  | Adami     | Daemon
+| 16. Nov. 2017  |Karl       | Datenschutzgrundverordnung
+| 23. Nov. 2017  | Juster    | Chocolatey
+| 30. Nov. 2017  |Schörghuber| Free development tools every .NET developer should know about
+| 07. Dec. 2017  |Schöller   |Subreddits for Developers
+| 14. Dec. 2017  |Arbeithuber| C# Scripting
 | 21. Dec. 2017  |           |
 | 11. Jan. 2018  |           |
 | 15. Feb. 2018  |           |
