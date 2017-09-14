@@ -55,7 +55,7 @@
 | 21. Sept. 2017 |Gornik     | Microsoft HoloLens
 | 28. Sept. 2017 |           |
 | 05. Oct. 2017  |           |
-| 12. Oct. 2017  |           |
+| 12. Oct. 2017  | el-Banna  | CDK Development Kit
 | 19. Oct. 2017  | Adami     | Daemon
 | 16. Nov. 2017  |Karl       | Datenschutzgrundverordnung
 | 23. Nov. 2017  | Juster    | Chocolatey
@@ -64,7 +64,7 @@
 | 14. Dec. 2017  |           |
 | 21. Dec. 2017  |           |
 | 11. Jan. 2018  |           |
-| 15. Feb. 2018  |           |
+| 15. Feb. 2018  |           | 
 | 01. Mar. 2018  |           |
 | 15. Mar. 2018  |           |
 | 22. Mar. 2018  |           |
