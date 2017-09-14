@@ -59,8 +59,8 @@
 | 19. Oct. 2017  | Adami     | Daemon
 | 16. Nov. 2017  |           |
 | 23. Nov. 2017  | Juster    | Chocolatey
-| 30. Nov. 2017  |           |
-| 07. Dec. 2017  |           |
+| 30. Nov. 2017  |Schörghuber| Free development tools every .NET developer should know about
+| 07. Dec. 2017  |           |
 | 14. Dec. 2017  |           |
 | 21. Dec. 2017  |           |
 | 11. Jan. 2018  |           |
