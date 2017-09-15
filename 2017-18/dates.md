@@ -63,9 +63,15 @@
 | 07. Dec. 2017  |Schöller   |Subreddits for Developers
 | 14. Dec. 2017  |Arbeithuber| C# Scripting
 | 21. Dec. 2017  |Benkner    | What is Net Neutrality and why is it so heavily discussed?
+| 21. Dec. 2017  |           |
 | 11. Jan. 2018  |Gusi       | Postman
+| 25. Jan. 2018  |           |
+| 01. Feb. 2018  |           |
+| 08. Feb. 2018  |           |
 | 15. Feb. 2018  |Mayr       | Fiddler
 | 01. Mar. 2018  |Buchinger  |What are SonarQube and SonarLint?
 | 15. Mar. 2018  |Wallner    | Markdown
 | 22. Mar. 2018  |Prömer     | BenchmarkDotNet
 | 05. Apr. 2018  |           |
+| 19. Apr. 2018  |           |
+| 26. Apr. 2018  |           |
