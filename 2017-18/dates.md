@@ -63,7 +63,7 @@
 | 07. Dec. 2017  |Schöller   |Subreddits for Developers
 | 14. Dec. 2017  |Arbeithuber| C# Scripting
 | 21. Dec. 2017  |Benkner    | What is Net Neutrality and why is it so heavily discussed?
-| 21. Dec. 2017  |           |
+| 21. Dec. 2017  |Barth      | LINQPad
 | 11. Jan. 2018  |Gusi       | Postman
 | 25. Jan. 2018  |           |
 | 01. Feb. 2018  |           |
