@@ -316,3 +316,10 @@ public static readonly RandomPieceGenerator SinglePixelGenerator =
 
 * Visual Studio unit testing
 * [Mock objects](https://en.wikipedia.org/wiki/Mock_object)
+
+
+<!-- .slide: class="left" -->
+## Further Readings and Exercises
+
+* Exercises
+  * [*LINQ Quiz*](https://github.com/rstropek/htl-csharp/tree/master/csharp-recap/9010-linq-quiz)
