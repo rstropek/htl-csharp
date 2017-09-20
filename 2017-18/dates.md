@@ -65,9 +65,9 @@
 | 21. Dec. 2017  |Benkner    | What is Net Neutrality and why is it so heavily discussed?
 | 21. Dec. 2017  |Barth      | LINQPad
 | 11. Jan. 2018  |Gusi       | Postman
-| 25. Jan. 2018  |           |
+| 25. Jan. 2018  |Köck       |What is the Ethereum Project
 | 01. Feb. 2018  |           |
-| 08. Feb. 2018  |Köck       |Insomnia
+| 08. Feb. 2018  |       |
 | 15. Feb. 2018  |Mayr       | Fiddler
 | 01. Mar. 2018  |Buchinger  |What are SonarQube and SonarLint?
 | 15. Mar. 2018  |Wallner    | Markdown
