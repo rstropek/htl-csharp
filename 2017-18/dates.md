@@ -53,8 +53,8 @@
 | Date           | Presenter | Topic
 |----------------|-----------|-------
 | 21. Sept. 2017 |Gornik     | Microsoft HoloLens
-| 28. Sept. 2017 |Schalhas   | .NET Foundation
-| 05. Oct. 2017  |Bauer      | Open Data
+| 28. Sept. 2017 |   | 
+| 05. Oct. 2017  |Bauer, Schalhas | Open Data, .NET Foundation
 | 12. Oct. 2017  |Ebner      | Developing in the GitHub Flow
 | 19. Oct. 2017  | Adami, Leitner     | Daemon, ODAC
 | 16. Nov. 2017  |Karl       | Datenschutzgrundverordnung
