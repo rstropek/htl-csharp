@@ -102,6 +102,7 @@ RestoreOriginalState(() =>
 
 * What does 'Action' mean?
 * Discuss 'Func', too.
+* See also [functional programming sample](https://github.com/rstropek/htl-csharp/blob/master/csharp-recap/0025-functional-programming/Program.cs)
 
 
 <!-- .slide: class="left" -->
