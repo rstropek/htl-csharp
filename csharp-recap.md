@@ -42,6 +42,7 @@ Let's remember C# fundamentals
 * [Constants](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/const)
 * Working with [`Console`](https://docs.microsoft.com/en-us/dotnet/api/system.console?view=netcore-2.0)
 * Functional programming with delegates
+  * See also [functional programming sample](https://github.com/rstropek/htl-csharp/blob/master/csharp-recap/0025-functional-programming/Program.cs)
 
 
 <!-- .slide: class="left" -->
@@ -101,6 +102,7 @@ RestoreOriginalState(() =>
 
 * What does 'Action' mean?
 * Discuss 'Func', too.
+* See also [functional programming sample](https://github.com/rstropek/htl-csharp/blob/master/csharp-recap/0025-functional-programming/Program.cs)
 
 
 <!-- .slide: class="left" -->
