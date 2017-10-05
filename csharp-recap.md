@@ -325,3 +325,5 @@ public static readonly RandomPieceGenerator SinglePixelGenerator =
 
 * Exercises
   * [*LINQ Quiz*](https://github.com/rstropek/htl-csharp/tree/master/csharp-recap/9010-linq-quiz)
+  * [*Maze Robot* Quiz](https://github.com/rstropek/htl-csharp/tree/master/csharp-recap/9020-maze-robot)
+  
