@@ -49,4 +49,4 @@ Let's remember .NET fundamentals
   * [Create your first .NET Core app](https://www.microsoft.com/net/core#windowscmd)
   * [C# Fundamentals](https://www.microsoft.com/net/tutorials/csharp/getting-started)
   * [Writing C# Code in Visual Studio](https://docs.microsoft.com/en-us/visualstudio/ide/writing-code-in-the-code-and-text-editor)
-
+  * [.NET Core Slides (Stropek)](https://github.com/rstropek/Samples/blob/master/AspNetCoreWorkshop/Slides/BASTA%202017%20-%20CSharp%20Workshop%20-%20Rainer%20Stropek.pdf)
