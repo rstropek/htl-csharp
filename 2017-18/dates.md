@@ -54,16 +54,16 @@
 |----------------|-----------|-------
 | 21. Sept. 2017 |Gornik     | Microsoft HoloLens
 | 28. Sept. 2017 |   | 
-| 05. Oct. 2017  |Bauer, Schalhas | Open Data, .NET Foundation
+| 05. Oct. 2017  |Bauer      | Open Data
 | 12. Oct. 2017  |Ebner      | Developing in the GitHub Flow
 | 19. Oct. 2017  | Adami, Leitner     | Daemon, ODAC
-| 16. Nov. 2017  |Karl       | Datenschutzgrundverordnung
+| 16. Nov. 2017  |Karl, Barth | Datenschutzgrundverordnung, LINQPad
 | 23. Nov. 2017  | Juster    | Chocolatey
 | 30. Nov. 2017  |Schörghuber| Free development tools every .NET developer should know about
 | 07. Dec. 2017  |Schöller   |Subreddits for Developers
 | 14. Dec. 2017  |Arbeithuber| C# Scripting
 | 21. Dec. 2017  |Benkner    | What is Net Neutrality and why is it so heavily discussed?
-| 21. Dec. 2017  |Barth      | LINQPad
+| 21. Dec. 2017  |           | 
 | 11. Jan. 2018  |Gusi       | Postman
 | 25. Jan. 2018  |Köck       |What is the Ethereum Project
 | 01. Feb. 2018  | el-Banna  | Red Hat Container Development Kit
