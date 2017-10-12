@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26923.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MemoryProblem", "MemoryProblem.csproj", "{CD1D9752-FA5E-48A7-8240-40593537397D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CD1D9752-FA5E-48A7-8240-40593537397D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD1D9752-FA5E-48A7-8240-40593537397D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD1D9752-FA5E-48A7-8240-40593537397D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD1D9752-FA5E-48A7-8240-40593537397D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {247BB1D8-99FF-47C8-AE44-C9DB8F02C491}
+	EndGlobalSection
+EndGlobal
