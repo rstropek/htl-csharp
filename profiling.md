@@ -328,3 +328,7 @@ Tools
 ## Further Readings and Exercises
 
 * Exercises
+  * [*Simple CPU Profiling* example](https://github.com/rstropek/htl-csharp/tree/master/profiling/0030-SimpleCpuProfiling)
+  * [*JIT problem* example](https://github.com/rstropek/htl-csharp/tree/master/profiling/0010-JitProblem)
+  * [*Memory problem* example](https://github.com/rstropek/htl-csharp/tree/master/profiling/0020-MemoryProblem)
+  
