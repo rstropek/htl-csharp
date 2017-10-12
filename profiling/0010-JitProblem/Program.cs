@@ -62,7 +62,7 @@ namespace JitProblem
         private static string ReadMacroFromFile()
         {
             string macroText;
-            using (var reader = File.OpenText(@"C:\Code\GitHub\htl-csharp\profiling\JitProblem\LevenshteinMacro.txt"))
+            using (var reader = File.OpenText(@"C:\Code\GitHub\htl-csharp\profiling\0010-JitProblem\LevenshteinMacro.txt"))
             {
                 macroText = reader.ReadToEnd();
             }
