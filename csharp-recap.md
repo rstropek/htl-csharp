@@ -315,6 +315,7 @@ public static readonly RandomPieceGenerator SinglePixelGenerator =
 ## Unit Testing
 
 [*Tetris.Tests*](https://github.com/rstropek/htl-csharp/tree/development/csharp-recap/0010-tetris/Tetris.Tests)
+[*Test* example](https://github.com/rstropek/htl-csharp/tree/development/testing/0010-vs-unit-testing)
 
 * Visual Studio unit testing
 * [Mock objects](https://en.wikipedia.org/wiki/Mock_object)
