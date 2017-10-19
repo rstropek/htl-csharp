@@ -143,8 +143,8 @@ Optimizing C# Applications
 * Less data security issues if you use artificial test data
 * Ability to run large-scale load tests
   * Gather perf data during long-running, large-scale load tests
-* SaaS enables you to optimize for a concrete environment
-  * Economy of scale
+* [SaaS](https://en.wikipedia.org/wiki/Software_as_a_service) enables you to optimize for a concrete environment
+  * [Economy of scale](https://en.wikipedia.org/wiki/Economies_of_scale)
 
 
 <!-- .slide: class="left" -->
@@ -205,7 +205,7 @@ Optimizing C# Applications
 * How often do you call over the network?
   * Latency, speed-of-light problem
   * Ratio between latency and service operation
-  * Consider reducing network calls with caching (e.g. Redis cache)...<br/>
+  * Consider reducing network calls with caching (e.g. [Redis](https://redis.io/) cache)...<br/>
     ...but make sure that you cache doesn't make perf worse!
 * How much data do you transfer?
   * Transfer less data (e.g. unnecessary database columns)
@@ -241,9 +241,9 @@ Tools
 
 Tools
 
-* *Windows Performance Monitor* (*PerfMon*)
+* *Windows Performance Monitor* ([*PerfMon*](https://technet.microsoft.com/en-us/library/2008.08.pulse.aspx))
   * Gather telemetry of local system
-* *PerfView*
+* [*PerfView*](https://www.microsoft.com/en-us/download/details.aspx?id=28567)
   * Free, low-level profiler for Windows
 
 
