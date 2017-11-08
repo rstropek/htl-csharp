@@ -22,6 +22,16 @@ Of course, developing your own machine learning solution for face detection woul
   * draw a red rectangle around each face, and 
   * save the resulting image into the output file.
 
+## Test Data
+
+Here is an example of a source image:
+
+<img src="original.jpg" width="50%" alt="Original Image" />
+
+Here you see the image after face detection:
+
+<img src="faces.jpg" width="50%" alt="Recognized faces" />
+
 ## Hints
 
 * **Before you start coding**, take some time to make yourself familiar with the services that [Microsoft Cognitive Services](https://azure.microsoft.com/en-us/services/cognitive-services/) offer. You can use the offering's website to interactively try the different machine learning services.
