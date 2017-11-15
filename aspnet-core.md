@@ -133,7 +133,7 @@ Web App and Web API Development with ASP.NET Core
 ## Middlewares: Web API
 
 ```
-<!--#include file="aspnet-core/0030-web-api/Startup.cs" -->
+<!--#include file="aspnet-core/0030-web-api/app/Startup.cs" -->
 ```
 
 
@@ -141,7 +141,7 @@ Web App and Web API Development with ASP.NET Core
 ## Middlewares: Web API
 
 ```
-<!--#include file="aspnet-core/0030-web-api/ToDoController.cs" -->
+<!--#include file="aspnet-core/0030-web-api/app/ToDoController.cs" -->
 ```
 
 * Get all todo items with<br/>
@@ -152,7 +152,7 @@ Web App and Web API Development with ASP.NET Core
 ## Middlewares: Web API
 
 ```
-<!--#include file="aspnet-core/0030-web-api/ToDoControllerIndex.cs" -->
+<!--#include file="aspnet-core/0030-web-api/app/ToDoControllerIndex.cs" -->
 ```
 
 * Get todo item at index 1 with<br/>
@@ -163,7 +163,7 @@ Web App and Web API Development with ASP.NET Core
 ## Middlewares: Web API
 
 ```
-<!--#include file="aspnet-core/0030-web-api/ToDoControllerAdd.cs" -->
+<!--#include file="aspnet-core/0030-web-api/app/ToDoControllerAdd.cs" -->
 ```
 
 * Add todo item with HTTP `POST` request
@@ -173,7 +173,7 @@ Web App and Web API Development with ASP.NET Core
 ## Middlewares: Web API
 
 ```
-<!--#include file="aspnet-core/0030-web-api/ToDoControllerUpdate.cs" -->
+<!--#include file="aspnet-core/0030-web-api/app/ToDoControllerUpdate.cs" -->
 ```
 
 * Update todo item with HTTP `PUT` request
@@ -183,7 +183,63 @@ Web App and Web API Development with ASP.NET Core
 ## Middlewares: Web API
 
 ```
-<!--#include file="aspnet-core/0030-web-api/ToDoControllerDelete.cs" -->
+<!--#include file="aspnet-core/0030-web-api/app/ToDoControllerDelete.cs" -->
 ```
 
 * Delete todo item with HTTP `DELETE` request
+
+
+<!-- .slide: class="left" -->
+## Testing Web APIs: Project File
+
+```
+<!--#include file="aspnet-core/0030-web-api/test/test.csproj" -->
+```
+
+
+<!-- .slide: class="left" -->
+## Testing Web APIs: Test Web Server
+
+```
+<!--#include file="aspnet-core/0030-web-api/test/TestToDoController.cs" -->
+```
+
+
+<!-- .slide: class="left" -->
+## Testing Web APIs
+
+```
+<!--#include file="aspnet-core/0030-web-api/test/TestToDoControllerGetAll.cs" -->
+```
+
+
+<!-- .slide: class="left" -->
+## Testing Web APIs
+
+```
+<!--#include file="aspnet-core/0030-web-api/test/TestToDoControllerIndex.cs" -->
+```
+
+
+<!-- .slide: class="left" -->
+## Testing Web APIs
+
+```
+<!--#include file="aspnet-core/0030-web-api/test/TestToDoControllerAdd.cs" -->
+```
+
+
+<!-- .slide: class="left" -->
+## Testing Web APIs
+
+```
+<!--#include file="aspnet-core/0030-web-api/test/TestToDoControllerDelete.cs" -->
+```
+
+
+<!-- .slide: class="left" -->
+## Testing Web APIs
+
+```
+<!--#include file="aspnet-core/0030-web-api/test/TestToDoControllerUpdate.cs" -->
+```
