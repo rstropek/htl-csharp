@@ -65,3 +65,5 @@ bin
 obj
 *.suo
 .vs
+*.csproj.user
+launchSettings.json

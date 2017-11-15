@@ -1,0 +1,21 @@
+GET http://localhost:36416/api/todo-items
+Accept: application/json
+
+###
+GET http://localhost:36416/api/todo-items/0
+Accept: application/json
+
+###
+POST http://localhost:36416/api/todo-items
+Content-Type: application/json
+
+"Watch TV"
+
+###
+PUT http://localhost:36416/api/todo-items/2
+Content-Type: application/json
+
+"Watch Netflix"
+
+###
+DELETE http://localhost:36416/api/todo-items/2
