@@ -190,6 +190,15 @@ Web App and Web API Development with ASP.NET Core
 
 
 <!-- .slide: class="left" -->
+## Don't Forget *CORS*!
+
+<img src="images/CORS_principle.png" width="50%" />
+
+* Image Source [MDN](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS)
+* [CORS in ASP.NET Core...](https://docs.microsoft.com/en-us/aspnet/core/security/cors)
+
+
+<!-- .slide: class="left" -->
 ## Testing Web APIs: Project File
 
 ```
