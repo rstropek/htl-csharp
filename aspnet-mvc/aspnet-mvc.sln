@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27009.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "aspnet-mvc", "app\aspnet-mvc.csproj", "{24A3CCB5-24DA-4ACD-84A9-EC5F436B9BD1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tests", "tests\tests.csproj", "{9B551569-FFC0-4060-A481-8265B3C50A18}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{24A3CCB5-24DA-4ACD-84A9-EC5F436B9BD1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{24A3CCB5-24DA-4ACD-84A9-EC5F436B9BD1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{24A3CCB5-24DA-4ACD-84A9-EC5F436B9BD1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{24A3CCB5-24DA-4ACD-84A9-EC5F436B9BD1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B551569-FFC0-4060-A481-8265B3C50A18}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B551569-FFC0-4060-A481-8265B3C50A18}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B551569-FFC0-4060-A481-8265B3C50A18}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B551569-FFC0-4060-A481-8265B3C50A18}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {97894DAA-F938-4020-9441-24B3C4C4B1DC}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+
+    <!--
+        Note the use of ViewBag to pass data into the layout page. For details see
+        https://docs.microsoft.com/en-us/aspnet/core/mvc/views/overview#passing-data-to-views
+    -->
+    <title>@ViewBag.Title</title>
+
+    <!-- To make page more beautiful, add CSS framework Bootstrap -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="jumbotron">
+            <h1 class="display-3">Heroes</h1>
+            <p class="lead">Sample for HTL Perg</p>
+            <hr class="my-4">
+            <p>
+                This is a sample for a programming lecture at HTL Perg.
+            </p>
+            <p class="lead">
+                <a class="btn btn-primary btn-lg" href="https://rstropek.github.io/htl-csharp/#/" role="button">Learn more</a>
+            </p>
+        </div>
+
+        <!-- Here we add the HTML for the corresponding page -->
+        @RenderBody()
+    </div>
+</body>
+</html>

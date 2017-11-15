@@ -1,0 +1,50 @@
+﻿@{ 
+// Note how we pass typed data from controller to view. For details see
+// https://docs.microsoft.com/en-us/aspnet/core/mvc/views/overview#passing-data-to-views
+}
+@model IEnumerable<AspNetMvcDemo.Models.Hero>
+
+@{
+    // Reference the layout page we want to use. For details see
+    // https://docs.microsoft.com/en-us/aspnet/core/mvc/views/layout
+    Layout = "_Layout";
+
+    // Pass data to layout page using untyped ViewBag. For details see 
+    // https://docs.microsoft.com/en-us/aspnet/core/mvc/views/overview#passing-data-to-views
+    ViewBag.Title = "Hero List";
+}
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @{ 
+                    // Note the use of DisplayNameFor and DisplayFor. This reads field descriptions
+                    // and field values from the model. For details see
+                    // https://docs.microsoft.com/en-us/aspnet/core/tutorials/razor-pages/
+                }
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RealName)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.RealName)
+                </td>
+                <td>
+                    @Html.ActionLink("Details", "Details", new { id = item.ID }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.ID })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

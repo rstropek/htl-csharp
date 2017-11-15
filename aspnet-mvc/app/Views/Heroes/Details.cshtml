@@ -1,0 +1,57 @@
+﻿@{
+// Note how tag helpers are imported. To learn about tag helpers see
+// https://docs.microsoft.com/en-us/aspnet/core/mvc/views/tag-helpers/intro
+}
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+@{
+// Note how we pass typed data from controller to view. For details see
+// https://docs.microsoft.com/en-us/aspnet/core/mvc/views/overview#passing-data-to-views
+}
+@model AspNetMvcDemo.Models.Hero
+
+@{
+    // Reference the layout page we want to use. For details see
+    // https://docs.microsoft.com/en-us/aspnet/core/mvc/views/layout
+    Layout = "_Layout";
+
+    // Pass data to layout page using untyped ViewBag. For details see 
+    // https://docs.microsoft.com/en-us/aspnet/core/mvc/views/overview#passing-data-to-views
+    ViewBag.Title = "Hero Details";
+}
+<div>
+    <h4>Hero</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @{
+                // Note the use of DisplayNameFor and DisplayFor. This reads field descriptions
+                // and field values from the model. For details see
+                // https://docs.microsoft.com/en-us/aspnet/core/tutorials/razor-pages/
+            }
+            @Html.DisplayNameFor(model => model.ID)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ID)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.RealName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.RealName)
+        </dd>
+    </dl>
+</div>
+<div>
+    <!--
+        Note the Anchor tag helper. For details see
+        https://docs.microsoft.com/en-us/aspnet/core/mvc/views/tag-helpers/built-in/anchor-tag-helper
+    -->
+    <a asp-action="Index">Back to List</a>
+</div>
