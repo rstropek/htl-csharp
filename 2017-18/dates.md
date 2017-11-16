@@ -72,6 +72,6 @@
 | 01. Mar. 2018  |Buchinger  |What are SonarQube and SonarLint?
 | 15. Mar. 2018  |Wallner    | Markdown
 | 22. Mar. 2018  |Prömer     | BenchmarkDotNet
-| 05. Apr. 2018  |           |
+| 05. Apr. 2018  |Maurhart   | The Martian by Andy Weir
 | 19. Apr. 2018  |           |
 | 26. Apr. 2018  |           |
