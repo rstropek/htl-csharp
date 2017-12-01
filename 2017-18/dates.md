@@ -16,9 +16,9 @@
 | 16. Nov. 2017  | [ASP.NET Core](https://docs.microsoft.com/en-us/aspnet/core/) fundamentals
 | 23. Nov. 2017  | [ASP.NET Core MVC](https://docs.microsoft.com/en-us/aspnet/core/mvc/overview) fundamentals
 | 30. Nov. 2017  | Professional RESTful Web APIs
-| 07. Dec. 2017  | [RESTful Web APIs with ASP.NET Core](https://docs.microsoft.com/en-us/aspnet/core/tutorials/first-web-api) fundamentals
-| 14. Dec. 2017  | OR-Mapper, [Entity Framework Core](https://docs.microsoft.com/en-us/aspnet/core/data/ef-mvc/intro) fundamentals
-| 21. Dec. 2017  | *ASP.NET Core* and *Entity Framework Core* working together
+| 07. Dec. 2017  | OR-Mapper, [Entity Framework Core](https://docs.microsoft.com/en-us/aspnet/core/data/ef-mvc/intro) fundamentals
+| 14. Dec. 2017  | [Entity Framework Core](https://docs.microsoft.com/en-us/aspnet/core/data/ef-mvc/intro)
+| 21. Dec. 2017  | **No Lesson**
 | 28. Dec. 2017  | **Christmas Break (*Weihnachtsferien*)**
 | 04. Jan. 2018  | **Christmas Break (*Weihnachtsferien*)**
 | 11. Jan. 2018  | [L10n and I18n](https://www.w3.org/International/questions/qa-i18n), exam preparation
