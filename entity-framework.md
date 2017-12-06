@@ -67,9 +67,23 @@ O/RM in .NET Core
 
 
 <!-- .slide: class="left" -->
+## Learn by Example
+
+* [*Address Book* example on GitHub](https://github.com/rstropek/htl-csharp/tree/master/entity-framework/0020-web-api)
+* `AddJsonOptions` in [Startup.cs](https://github.com/rstropek/htl-csharp/blob/master/entity-framework/0020-web-api/Startup.cs) for handling loops in JSON serialization
+* `services.AddDbContext` in [Startup.cs](https://github.com/rstropek/htl-csharp/blob/master/entity-framework/0020-web-api/Startup.cs) for adding EF context to ASP.NET Core *Dependency Injection*
+* [AutoMapper](http://automapper.org/) in [Startup.cs](https://github.com/rstropek/htl-csharp/blob/master/entity-framework/0020-web-api/Startup.cs)
+* [Migrations](https://github.com/rstropek/htl-csharp/tree/master/entity-framework/0020-web-api/Migrations)
+  * [Read more about migrations...](https://docs.microsoft.com/en-us/ef/core/managing-schemas/migrations/)
+* Visual Studio [*Scaffolding*](https://docs.microsoft.com/en-us/ef/core/get-started/aspnetcore/new-db#create-a-controller) for controllers
+* EF's `Include` in [GroupsController.cs](https://github.com/rstropek/htl-csharp/blob/master/entity-framework/0020-web-api/Controllers/GroupsController.cs)
+
+
+<!-- .slide: class="left" -->
 ## Further Readings and Exercises
 
 * Readings
   * [Entity Framework Documentation](https://docs.microsoft.com/en-us/ef/#pivot=efcore)
   * [EF Tutorial with ASP.NET Core](https://docs.microsoft.com/en-us/aspnet/core/data/ef-rp/intro)
-  
+* Videos
+  * Want to know more details? Watch [Entity Framework Core](https://channel9.msdn.com/Shows/Visual-Studio-Toolbox/Entity-Framework-Core) on *Channel 9*
