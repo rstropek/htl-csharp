@@ -136,7 +136,7 @@ namespace EFIntro
 <!-- .slide: class="left" -->
 ## EF Core + ASP.NET Core Cheat Sheet
 
-[Entity Framework Cheat Sheet](entity-framework/ef-aspnet-cheat-sheet.md)
+[Entity Framework Cheat Sheet](https://github.com/rstropek/htl-csharp/blob/master/entity-framework/ef-aspnet-cheat-sheet.md)
 
 
 <!-- .slide: class="left" -->
@@ -148,4 +148,4 @@ namespace EFIntro
 * Videos
   * Want to know more details? Watch [Entity Framework Core](https://channel9.msdn.com/Shows/Visual-Studio-Toolbox/Entity-Framework-Core) on *Channel 9*
 * Exercises
-  * [*Cash Desk* Quiz](entity-framework/9010-cash-desk/)
+  * [*Cash Desk* Quiz](https://github.com/rstropek/htl-csharp/tree/master/entity-framework/9010-cash-desk)
