@@ -5,11 +5,21 @@ using Microsoft.EntityFrameworkCore;
 using EntityFrameworkWebApi.Models;
 using Newtonsoft.Json;
 using AutoMapper;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Logging.Console;
 
 namespace EntityFrameworkWebApi
 {
     public class Startup
     {
+        private IConfiguration configuration;
+
+        public Startup(IConfiguration configuration)
+        {
+            this.configuration = configuration;
+        }
+
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc()
@@ -20,8 +30,8 @@ namespace EntityFrameworkWebApi
                 });
 
             // We use SQL Server Express LocalDB for this example
-            const string connection = @"Server=(localdb)\dev;Database=AddressBook;Trusted_Connection=True;ConnectRetryCount=0";
-            services.AddDbContext<AddressBookContext>(options => options.UseSqlServer(connection));
+            services.AddDbContext<AddressBookContext>(options => options.UseSqlServer(
+                configuration["ConnectionStrings:DefaultConnection"]));
 
             // Configure AutoMapper, a very useful component for copying data
             // between objects. For details see http://automapper.org/

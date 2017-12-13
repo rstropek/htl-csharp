@@ -80,6 +80,12 @@ O/RM in .NET Core
 
 
 <!-- .slide: class="left" -->
+## EF Core + ASP.NET Core Cheat Sheet
+
+[Entity Framework Cheat Sheet](entity-framework/ef-aspnet-cheat-sheet.md)
+
+
+<!-- .slide: class="left" -->
 ## Further Readings and Exercises
 
 * Readings
@@ -87,3 +93,5 @@ O/RM in .NET Core
   * [EF Tutorial with ASP.NET Core](https://docs.microsoft.com/en-us/aspnet/core/data/ef-rp/intro)
 * Videos
   * Want to know more details? Watch [Entity Framework Core](https://channel9.msdn.com/Shows/Visual-Studio-Toolbox/Entity-Framework-Core) on *Channel 9*
+* Exercises
+  * [*Cash Desk* Quiz](entity-framework/9010-cash-desk/)

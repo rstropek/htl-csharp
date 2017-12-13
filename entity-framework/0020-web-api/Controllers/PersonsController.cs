@@ -23,6 +23,9 @@ namespace EntityFrameworkWebApi.Controllers
 
         [HttpGet]
         public IEnumerable<PersonListResult> GetPersons() =>
+            // Note how we use `Include` to join Person and Group tables.
+            // For details see https://docs.microsoft.com/en-us/ef/core/querying/related-data
+            // Exercise: Turn on logging (see AddressBookContext.cs) and review SQL statement(s)
             context.Persons
                 .Include(p => p.Group)
                 .Select(p => mapper.Map<PersonListResult>(new
