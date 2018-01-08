@@ -62,7 +62,7 @@
 | 30. Nov. 2017  |Schörghuber| Free development tools every .NET developer should know about
 | 07. Dec. 2017  |Schöller   |Subreddits for Developers
 | 14. Dec. 2017  |Arbeithuber| C# Scripting
-| 21. Dec. 2017  |Benkner    | What is Net Neutrality and why is it so heavily discussed?
+| 21. Dec. 2017  |           |
 | 21. Dec. 2017  |           | 
 | 11. Jan. 2018  |Gusi       | Postman
 | 25. Jan. 2018  |Köck       |What is the Ethereum Project
@@ -74,4 +74,4 @@
 | 22. Mar. 2018  |Prömer     | BenchmarkDotNet
 | 05. Apr. 2018  |Maurhart   | The Martian by Andy Weir
 | 19. Apr. 2018  |Zeiml      | Creative Commons
-| 26. Apr. 2018  |           |
+| 26. Apr. 2018  |Benkner    | What is Net Neutrality and why is it so heavily discussed?
