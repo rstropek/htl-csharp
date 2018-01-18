@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27205.2004
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TicTacToe", "TicTacToe\TicTacToe.csproj", "{06280FE8-CF1C-426F-B10D-FDE3BFB26D34}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TicTacToe.Logic", "..\TicTacToe.Logic\TicTacToe.Logic.csproj", "{4AF04AAD-E4EC-4AC3-8DB7-75AAF68C5D91}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TicTacToe.Tests", "TicTacToe.Tests\TicTacToe.Tests.csproj", "{7DD2CEC6-67F7-4672-B7FD-796741F4E8DB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{06280FE8-CF1C-426F-B10D-FDE3BFB26D34}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06280FE8-CF1C-426F-B10D-FDE3BFB26D34}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{06280FE8-CF1C-426F-B10D-FDE3BFB26D34}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{06280FE8-CF1C-426F-B10D-FDE3BFB26D34}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4AF04AAD-E4EC-4AC3-8DB7-75AAF68C5D91}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4AF04AAD-E4EC-4AC3-8DB7-75AAF68C5D91}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4AF04AAD-E4EC-4AC3-8DB7-75AAF68C5D91}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4AF04AAD-E4EC-4AC3-8DB7-75AAF68C5D91}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7DD2CEC6-67F7-4672-B7FD-796741F4E8DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7DD2CEC6-67F7-4672-B7FD-796741F4E8DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7DD2CEC6-67F7-4672-B7FD-796741F4E8DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7DD2CEC6-67F7-4672-B7FD-796741F4E8DB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CD030921-CDEB-477F-BC2A-2D2B75882295}
+	EndGlobalSection
+EndGlobal

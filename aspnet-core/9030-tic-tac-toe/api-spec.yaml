@@ -1,0 +1,60 @@
+openapi: 3.0.0
+info:
+  description: TicTacToe exam example
+  version: 0.1.0
+  title: TicTacToe Evaluator
+paths:
+  /api/getWinner:
+    post:
+      summary: Gets the winner of a TicTacToe board
+      operationId: getWinner1
+      requestBody:
+        description: TicTacToe board
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Board'
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Winner'
+        '400':
+          description: Invalid board (e.g. board array does not have exactly nine elements)
+    get:
+      summary: Gets the winner of a TicTacToe board
+      operationId: getWinner2
+      parameters:
+        - name: board
+          in: query
+          description: TicTacToe board (comma-separated values of nine cells; e.g. ",X,O,,X,O,O,X,")
+          required: true
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Board'
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Winner'
+        '400':
+          description: Invalid board (e.g. board array does not have exactly nine elements)
+components:
+  schemas:
+    Winner:
+      type: object
+      properties:
+        winner:
+          type: string
+          description: Winner, `null` if there is no winner
+    Board:
+      type: array
+      items:
+        type: string
+        description: Array with nine strings, each representing a cell of the TicTacToe board
