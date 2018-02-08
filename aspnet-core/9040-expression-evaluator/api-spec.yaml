@@ -1,0 +1,84 @@
+openapi: 3.0.0
+info:
+  description: Expression evaluator exam example
+  version: 0.1.0
+  title: Expression Evaluator
+paths:
+  /api/variables:
+    get:
+      summary: Gets a list of variables with their assigned values
+      operationId: getVariables
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Variables'
+    post:
+      summary: Assigns a value to a variable
+      operationId: setVariable
+      requestBody:
+        description: Variable name and value
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Variable'
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Variable'
+  /api/evaluate:
+    post:
+      summary: Evaluates a given expression
+      operationId: evaluate
+      requestBody:
+        description: Expression
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Expression'
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ExpressionWithResult'
+        '400':
+          description: Invalid expression
+components:
+  schemas:
+    Variable:
+      type: object
+      properties:
+        name:
+          type: string
+          description: Variable name
+        value:
+          type: number
+          description: Assigned value
+    Variables:
+      type: array
+      items:
+        $ref: '#/components/schemas/Variable'
+    Expression:
+      type: object
+      properties:
+        expression:
+          type: string
+          description: Expression (e.g. '1+2+x')
+    ExpressionWithResult:
+      type: object
+      properties:
+        expression:
+          type: string
+          description: Expression (e.g. '1+2+x')
+        result:
+          type: number
+          description: Expression (e.g. 10)
