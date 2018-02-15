@@ -24,9 +24,9 @@
 | 11. Jan. 2018  | [L10n and I18n](https://www.w3.org/International/questions/qa-i18n), exam preparation
 | 18. Jan. 2018  | Written exam
 | 25. Jan. 2018  | Discuss exam results
-| 01. Feb. 2018  | Oral exams
-| 08. Feb. 2018  | Oral exams, [DevOps](https://en.wikipedia.org/wiki/DevOps), [Continuous Integration](https://www.visualstudio.com/team-services/continuous-integration/)
-| 15. Feb. 2018  | [Microservices](https://martinfowler.com/articles/microservices.html) architecture pattern
+| 01. Feb. 2018  | Exercises for second written exam
+| 08. Feb. 2018  | Second written exam
+| 15. Feb. 2018  | [DevOps](https://en.wikipedia.org/wiki/DevOps), [Continuous Integration](https://www.visualstudio.com/team-services/continuous-integration/), [Microservices](https://martinfowler.com/articles/microservices.html) architecture pattern
 | 22. Feb. 2018  | **Semester Break (*Semesterferien*)**
 | 01. Mar. 2018  | [XAML](https://github.com/Microsoft/xaml-standard) and [WPF](https://docs.microsoft.com/en-us/dotnet/framework/wpf/getting-started/) fundamentals
 | 08. Mar. 2018  | **Replacement Lesson**
