@@ -93,6 +93,35 @@ namespace EFIntro
 
 
 <!-- .slide: class="left" -->
+## Writing Data to Related Sets
+
+```
+using Microsoft.EntityFrameworkCore;
+using Newtonsoft.Json;
+using System;
+using System.Threading.Tasks;
+
+namespace Joins
+{
+    partial class Program
+    {
+        static async Task AddWithJoinAsync(OrderContext context)
+        {
+            var order = new Order { Product = "Bike", 
+                Customer = new Customer { Name = "John" } };
+
+            // Note SINGLE call to `Add` and `SaveChangesAsync`
+            context.Orders.Add(order);
+            await context.SaveChangesAsync();
+        }
+    }
+}
+```
+
+* Note *single* call to `Add` and `SaveChangesAsync`
+
+
+<!-- .slide: class="left" -->
 ## Querying Data
 
 ```
@@ -118,6 +147,33 @@ namespace EFIntro
 ```
 
 * Read more about [querying data](https://docs.microsoft.com/en-us/ef/core/querying/)
+
+
+<!-- .slide: class="left" -->
+## Querying Data
+
+```
+using Microsoft.EntityFrameworkCore;
+using Newtonsoft.Json;
+using System;
+using System.Threading.Tasks;
+
+namespace Joins
+{
+    partial class Program
+    {
+        static async Task QueryWithJoinAsync(OrderContext context)
+        {
+            var result = await context.Orders
+                .Include("Customer")
+                .FirstAsync();
+            Console.WriteLine(JsonConvert.SerializeObject(result));
+        }
+    }
+}
+```
+
+* `Include`: Getting `Order` with related `Customer`
 
 
 <!-- .slide: class="left" -->
