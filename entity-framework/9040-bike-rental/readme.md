@@ -43,7 +43,7 @@ The system has to store **customers**. For each *Customer*, you have to store th
 1. Zip code - mandatory, max. 10 characters
 1. Town - mandatory, max. 75 characters
 
-Because of data protection regulations, it must be possible to delete a customers. If a customer is deleted, all data referencing this customers - in particular her bike rentals - have to be deleted, too.
+Because of data protection regulations, it must be possible to delete a customer. If a customer is deleted, all data referencing this customer - in particular her bike rentals - have to be deleted, too.
 
 #### Bikes
 
@@ -73,7 +73,7 @@ The system has to store **rentals** of bikes by customers. The *Rentals* entity 
 1. Mandatory reference to the rented bike
 1. Rental begin - mandatory date and time
 1. Rental end - optional date and time, must be > rental begin
-1. Total costs in Euro - total rental costs, two decimal places, value >= 1.00
+1. Total costs in Euro - total rental costs, two decimal places, value >= 0.00
 1. Paid flag - boolean flag indicating whether the rental has already been paid by the customer, can only be *true* if the rental has already ended (i.e. rental end and total costs are set)
 
 The system has to **calculate the total costs** automatically as soon as the end time of the rental is known. The costs are calculated based on rental time and the rental price for the rented bike. Details regarding cost calculation follow later in this document.
