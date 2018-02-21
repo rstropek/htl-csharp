@@ -57,6 +57,16 @@ O/RM in .NET Core
 
 
 <!-- .slide: class="left" -->
+## Writing Data to Related Sets
+
+```
+<!--#include file="entity-framework/0030-joins/AddingWithJoin.cs" -->
+```
+
+* Note *single* call to `Add` and `SaveChangesAsync`
+
+
+<!-- .slide: class="left" -->
 ## Querying Data
 
 ```
@@ -64,6 +74,16 @@ O/RM in .NET Core
 ```
 
 * Read more about [querying data](https://docs.microsoft.com/en-us/ef/core/querying/)
+
+
+<!-- .slide: class="left" -->
+## Querying Data
+
+```
+<!--#include file="entity-framework/0030-joins/QueryWithJoin.cs" -->
+```
+
+* `Include`: Getting `Order` with related `Customer`
 
 
 <!-- .slide: class="left" -->
