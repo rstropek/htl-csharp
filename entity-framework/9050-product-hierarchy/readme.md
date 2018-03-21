@@ -89,3 +89,5 @@ Access the database directly from WPF if you want to keep it simple. If you want
 ## Solution
 
 [*solution.sql*](solution.sql) contains a query that contains the calculation logic. You can use its result to verify whether your solution is correct.
+
+[*ProductHierarchy*](https://github.com/rstropek/htl-csharp/tree/master/entity-framework/9050-product-hierarchy/ProductHierarchy) contains a sample solution. However, try to find your own solution before checking this reference implementation.
