@@ -32,6 +32,7 @@ Windows Presentation Foundation
 ## WPF Material
 
 > See slides and samples in [GitHub repository](https://github.com/rstropek/Samples/tree/master/WpfTraining)
+> [*Cash Register* hands-on-lab](https://github.com/rstropek/htl-csharp/tree/master/wpf/9020-register)
 
 
 <!-- .slide: class="left" -->
@@ -39,3 +40,4 @@ Windows Presentation Foundation
 
 * [WPF in Microsoft documentation](https://docs.microsoft.com/en-us/dotnet/framework/wpf/getting-started/introduction-to-wpf-in-vs)
 * [Step-by-step guide for creating a WPF application](https://docs.microsoft.com/en-us/dotnet/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application)
+* [Implementing the MVVM Pattern Using the Prism Library for WPF](http://prismlibrary.github.io/docs/wpf/Implementing-MVVM.html)
