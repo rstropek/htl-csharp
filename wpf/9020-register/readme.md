@@ -177,11 +177,11 @@ public class Receipt
     *C# classes for DTOs (find an appropriate place where to put them):*
 
     ```cs
-        public class ReceiptLineDto
-        {
-            public int ProductID { get; set; }
-            public int Amount { get; set; }
-        }
+    public class ReceiptLineDto
+    {
+        public int ProductID { get; set; }
+        public int Amount { get; set; }
+    }
     ```
 
     *Code for generating a `Receipt` from a `ReceiptDto`:*
@@ -307,6 +307,8 @@ Now the backend is done. Make sure to test it with an interactive client like *P
 * Last but not least we need two *Commands* (*add item to shopping basket*, and *checkout*) that the buttons can trigger when pressed. The *Prism* library gives us a [helper class for commands named `DelegateCommand`](http://prismlibrary.github.io/docs/wpf/Implementing-MVVM.html#implementing-command-objects). A delegate command is representing a function that should be called when the button is pressed *and* an *execution state*. If the *execution state* is `false`, the command cannot be called and WPF will *automatically disable the bound button*. If it is `true`, the button is enabled.
 
     ```cs
+    // The command takes an integer input parameter because it receives the
+    // ID of the product which should be added.
     public DelegateCommand<int?> AddToBasketCommand { get; }
 
     public DelegateCommand CheckoutCommand { get; }

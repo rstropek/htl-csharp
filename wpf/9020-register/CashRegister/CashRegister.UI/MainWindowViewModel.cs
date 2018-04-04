@@ -74,6 +74,8 @@ namespace CashRegister.UI
         // when the button is pressed *and* an *execution state*. If the *execution state* 
         // is `false`, the command cannot be called and WPF will *automatically disable 
         // the bound button*. If it is `true`, the button is enabled.
+        // The command takes an integer input parameter because it receives the
+        // ID of the product which should be added.
         public DelegateCommand<int?> AddToBasketCommand { get; }
 
         private void OnAddToBasket(int? productID)
