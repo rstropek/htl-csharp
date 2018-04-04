@@ -68,3 +68,4 @@ obj
 *.csproj.user
 launchSettings.json
 .vscode
+packages
