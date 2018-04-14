@@ -33,6 +33,7 @@ Windows Presentation Foundation
 
 * See slides and samples in [GitHub repository](https://github.com/rstropek/Samples/tree/master/WpfTraining)
 * [*Cash Register* hands-on-lab](https://github.com/rstropek/htl-csharp/tree/master/wpf/9020-register)
+* [*Taxi Manager* exercise](https://github.com/rstropek/htl-csharp/tree/master/wpf/9030-taxi-manager)
 
 
 <!-- .slide: class="left" -->
