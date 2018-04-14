@@ -1,0 +1,10 @@
+﻿<!-- NO NEED TO CHANGE SOMETHING IN THIS FILE DURING THE EXAM -->
+<Application x:Class="TaxiManager.UI.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:TaxiManager.UI"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+
+    </Application.Resources>
+</Application>
