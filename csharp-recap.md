@@ -48,7 +48,7 @@ Let's remember C# fundamentals
 <!-- .slide: class="left" -->
 ## Constants
 
-```
+```csharp
 public const int BOARD_WIDTH = 25;
 public const int BOARD_HEIGHT = 20;
 ```
@@ -61,7 +61,7 @@ public const int BOARD_HEIGHT = 20;
 <!-- .slide: class="left" -->
 ## Console
 
-```
+```csharp
 Console.Clear();
 Console.CursorVisible = false;
 ...
@@ -82,7 +82,7 @@ Console.Write("GAME OVER");
 <!-- .slide: class="left" -->
 ## Functional Programming Basics
 
-```
+```csharp
 private static void RestoreOriginalState(Action drawingFunc)
 {
   // Do some preparation
@@ -120,7 +120,7 @@ RestoreOriginalState(() =>
 <!-- .slide: class="left" -->
 ## C# XML Code Documentation
 
-```
+```csharp
 /// <summary>
 /// Represents a single piece in a tetris game
 /// </summary>
@@ -153,7 +153,7 @@ public class Piece
 <!-- .slide: class="left" -->
 ## Static Classes
 
-```
+```csharp
 public static class Pieces
 {
   ...
@@ -166,7 +166,7 @@ public static class Pieces
 <!-- .slide: class="left" -->
 ## Multidimensional Arrays, `readonly`
 
-```
+```csharp
 private static readonly bool[,] I = { { true, true, true, true } };
 private static readonly bool[,] J = { { true, true, true }, { false, false, true } };
 ```
@@ -189,7 +189,7 @@ private static readonly bool[,] J = { { true, true, true }, { false, false, true
 <!-- .slide: class="left" -->
 ## Indexer and Expression-bodied Members
 
-```
+```csharp
 private readonly bool[,] content;
 ...
 public bool this[int row, int col]
@@ -218,7 +218,7 @@ public bool this[int row, int col]
 <!-- .slide: class="left" -->
 ## Auto-implemented Properties
 
-```
+```csharp
 public int CurrentRow { get; private set; } = 0;
 public int CurrentCol { get; private set; } = 0;
 public Piece CurrentPiece { get; private set; } = null;
@@ -228,7 +228,7 @@ public Piece CurrentPiece { get; private set; } = null;
 <!-- .slide: class="left" -->
 ## Optional Arguments
 
-```
+```csharp
 public Board(IBoardContent content, RandomPieceGenerator pieceGenerator = null)
 {
   ...
@@ -239,7 +239,7 @@ public Board(IBoardContent content, RandomPieceGenerator pieceGenerator = null)
 <!-- .slide: class="left" -->
 ## Custom  Exceptions
 
-```
+```csharp
 public class BoardException : Exception
 {
   public BoardException() { }
@@ -254,7 +254,7 @@ public class BoardException : Exception
 <!-- .slide: class="left" -->
 ## *Try...* Pattern
 
-```
+```csharp
 public bool TryMergingPatternIntoBoardContent(int targetRow, int targetCol, bool[,] pattern)
 {
   if (/* Check */) {
@@ -278,7 +278,7 @@ public void MergePatternIntoBoardContent(int targetRow, int targetCol, bool[,] p
 <!-- .slide: class="left" -->
 ## Enumerations
 
-```
+```csharp
 public enum Direction : int
 {
   Down = 0,
@@ -291,10 +291,10 @@ public enum Direction : int
 <!-- .slide: class="left" -->
 ## Delegates
 
-```
+```csharp
 public delegate Piece RandomPieceGenerator();
 ...
-public static readonly RandomPieceGenerator SinglePixelGenerator = 
+public static readonly RandomPieceGenerator SinglePixelGenerator =
   () => new Piece(ConsoleColor.White, PiecesMockup.SinglePixel);
 ```
 

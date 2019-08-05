@@ -25,14 +25,28 @@ Let's remember .NET fundamentals
 
 * Cross-platform and open source implementation of .NET
 * Future of .NET
-* Components
+* Important components
   * [Core Common Language Runtime (CoreCLR)](https://github.com/dotnet/coreclr)
   * [Core Base Class Library (CoreFX)](https://github.com/dotnet/corefx)
   * [.NET Core SDK](https://docs.microsoft.com/en-us/dotnet/core/sdk)
- * [.NET Standard](https://docs.microsoft.com/en-us/dotnet/standard/net-standard)
+* [.NET Standard](https://docs.microsoft.com/en-us/dotnet/standard/net-standard)
   * A formal specification of .NET APIs that are available in each .NET implementation
 
-> We will focus on .NET Core in this course
+> We will focus on .NET Core and .NET Standard in the C# course
+
+
+<!-- .slide: class="left" -->
+## [Xamarin](https://docs.microsoft.com/en-us/xamarin/cross-platform/get-started/introduction-to-mobile-development)
+
+* Use C# to write mobile apps for Android and iOS
+* Cross-platform mobile development (*Xamarin.Android* and *Xamarin.iOS*)
+  * Code reuse
+  * Reduces effort for building an app for multiple platforms
+  * Bindings and interop to underlying SDKs and native languages (e.g. Java, Objective-C)
+* Compiled to *native code*, not interpreted
+  * [Good performance](https://docs.microsoft.com/en-us/xamarin/cross-platform/deploy-test/memory-perf-best-practices)
+
+> We will focus on Xamarin and Xamarin Forms in the Mobile Computing course
 
 
 <!-- .slide: class="left" -->
