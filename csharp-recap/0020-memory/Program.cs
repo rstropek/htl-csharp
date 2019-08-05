@@ -10,7 +10,7 @@ namespace memory
 
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
             ByValByRef();
             MemoryUsage();

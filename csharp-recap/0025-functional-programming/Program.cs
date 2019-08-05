@@ -6,7 +6,7 @@ namespace ConsoleApp4
 {
     static class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
             YieldDemo();
 
