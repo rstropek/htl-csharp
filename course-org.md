@@ -21,7 +21,7 @@ Dates, Lightning Talks, Exams, Grading, etc.
 <!-- .slide: class="left" -->
 ## Course Organization
 
-* [Online Course Calendar](https://github.com/rstropek/htl-csharp/blob/master/2017-18/dates.md)
+* [Online Course Calendar](https://github.com/rstropek/htl-csharp/blob/master/2019-20/dates.md)
 * [Get Course Material](https://github.com/rstropek/htl-csharp/) from GitHub
   * Feel free to contribute
 
@@ -59,15 +59,14 @@ Die Sch&uuml;lerinnen und Sch&uuml;ler k&ouml;nnen
 * Use Windows, Linux or Mac
   * Windows is the most convenient option
 * Development Environment
-  * [*Visual Studio Community Edition*](https://www.visualstudio.com/vs/) on Windows (most convenient option)
-  * [*Visual Studio Code*](https://code.visualstudio.com) on Windows, Linux or Mac
-* If you use VS, install at least the following modules:
+  * [*Visual Studio Community Preview Edition*](https://visualstudio.microsoft.com/vs/preview/) on Windows (most convenient option)
+* Install at least the following modules:
   * *.NET Core cross-platform development*
   * *ASP.NET and web development*
   * *.NET desktop development*
   * *Azure development*
-* If you use VSCode, install [*C#*](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp) plugin
-* Install [*.NET Core SDK*](https://www.microsoft.com/net/download/core)
+  * *Mobile Development with .NET*
+* Install [*.NET Core 3.0 SDK*](https://dotnet.microsoft.com/download/dotnet-core)
 
 
 <!-- .slide: class="left" -->
@@ -87,43 +86,52 @@ Die Sch&uuml;lerinnen und Sch&uuml;ler k&ouml;nnen
   * Consider [PechaKucha](https://en.wikipedia.org/wiki/PechaKucha)-style
   * Examples: [PechaKucha](https://youtu.be/XBhTaL7RpA8), ["Nerdy" one with demo](https://www.destroyallsoftware.com/talks/wat)
 * Any interesting technology topic (preferably mobile computing-related)
-  * [Suggestions](https://github.com/rstropek/htl-csharp/blob/master/2017-18/lightning-talk-suggestions.md)
-* Online form for [submitting topics](https://goo.gl/forms/0xIczpjIyGKRb6sl1)
-  * Get an **extra point** for [pull request](https://help.github.com/articles/about-pull-requests/) for [Online Course Calendar](https://github.com/rstropek/htl-csharp/blob/master/2017-18/dates.md)
+  * [Suggestions](https://github.com/rstropek/htl-csharp/blob/master/2019-20/lightning-talk-suggestions.md)
+  * Submit topics using a [pull request](https://help.github.com/articles/about-pull-requests/) for [Online Course Calendar](https://github.com/rstropek/htl-csharp/blob/master/2019-20/dates.md)
 
 
 <!-- .slide: class="left" -->
 ## Lightning Talks Grading
 
-| Criteria | Points |
-|---------------------------------------------------------------------------|------------|
-| Prepared for the presentation (e.g. handout, PPT, demo) | 20 |
-| Structure of the presentation | 5 |
-| Demonstrated understanding of the material | 20 |
-| Demonstrated critical thinking skills | 15 |
-| Took information from different sources and created something interesting | 25 |
-| Time management skills (concise presentation in <= 7 minutes) | 15 |
+|                                 Criteria                                  | Points |
+| ------------------------------------------------------------------------- | ------ |
+| Prepared for the presentation (e.g. handout, PPT, demo)                   | 20     |
+| Structure of the presentation                                             | 5      |
+| Demonstrated understanding of the material                                | 20     |
+| Demonstrated critical thinking skills                                     | 15     |
+| Took information from different sources and created something interesting | 25     |
+| Time management skills (concise presentation in <= 7 minutes)             | 15     |
 
 
 <!-- .slide: class="left" -->
 ## Exams
 
-* Two written exams
-  * Multiple-choice theory questions
-  * Case studies
+* *Four* written exams
   * Practical programming
-* Optional oral exams
+* One *optional* oral exam per semester
   * Chance to mend bad mark in written exam
-* Dates see [Online Course Calendar](https://github.com/rstropek/htl-csharp/blob/master/2017-18/dates.md)
+  * Requested by teacher *or you*
+* Dates see [Online Course Calendar](https://github.com/rstropek/htl-csharp/blob/master/2019-20/dates.md)
+
+
+<!-- .slide: class="left" -->
+## Homeworks
+
+* Everybody *must* do every homework
+* Random sample is checked
+  * No need to be perfect, hand in your best try
+  * Earn max. 2 points for a good homework
+  * Minus 2 points for missing homework
 
 
 <!-- .slide: class="left" -->
 ## Grading
 
-* Max. 100 points
-  * Max. 35 points per exam = total 70 points
-  * Max. 20 points for lightning talk
-  * Max. 10 points extra (separately announced)
+* Max. 80 points for exams
+  * Max. 20 points per exam
+* Max. 10 points for lightning talk
+* Max. 10 points homeworks
+* Optionally: Max. 20 points for oral exam
 
 
 ## Grading

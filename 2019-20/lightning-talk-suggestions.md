@@ -67,6 +67,7 @@ Here are suggestions for [lightning talk](https://en.wikipedia.org/wiki/Lightnin
     1. [*Ready Player One* by Ernest Cline](https://www.amazon.de/Ready-Player-One-Ernest-Cline/dp/0099560437/ref=sr_1_1?s=books-intl-de&ie=UTF8&qid=1500879569&sr=1-1&keywords=ready+player+one)
     1. [*Elon Musk* by Ashlee Vance](https://www.amazon.de/Elon-Musk-SpaceX-Fantastic-Future/dp/0062469673/ref=sr_1_1?s=books-intl-de&ie=UTF8&qid=1500879616&sr=1-1&keywords=elon+musk)
     1. [*The Martian* by Andy Weir](https://www.amazon.de/Martian-Movie-Tie-EXPORT-Novel/dp/1101905557/ref=sr_1_1?s=books-intl-de&ie=UTF8&qid=1500879660&sr=1-1&keywords=the+martian)
+    1. [*Artemis* by Andy Weir](https://www.amazon.de/Artemis-Novel-Andy-Weir/dp/052557266X/ref=sr_1_1?s=books-intl-de&ie=UTF8&qid=1536249124&sr=1-1)
     1. [*Zero Day* by Mark Russinovich](https://www.amazon.de/Zero-Day-Novel-Mark-Russinovich/dp/1250007305/ref=sr_1_3?s=books-intl-de&ie=UTF8&qid=1500879702&sr=1-3&keywords=russinovich)
     1. [*Ghost in the Wires* by Kevin Mitnick](https://www.amazon.de/Ghost-Wires-Adventures-Worlds-Wanted/dp/0316212180/ref=sr_1_1?s=books-intl-de&ie=UTF8&qid=1500879747&sr=1-1&keywords=ghost+in+the+wire)
     1. [*Nexus* by Ramez Naam](https://www.amazon.de/Nexus-Arc-Book-1/dp/0857665502/ref=sr_1_2?s=books-intl-de&ie=UTF8&qid=1500879826&sr=1-2&keywords=nexus)
@@ -74,6 +75,16 @@ Here are suggestions for [lightning talk](https://en.wikipedia.org/wiki/Lightnin
     1. [*The Black Swan* by Nassim Nicholas Taleb](https://www.amazon.de/Black-Swan-Impact-Highly-Improbable-ebook/dp/B002RI99IM/ref=sr_1_1?s=books-intl-de&ie=UTF8&qid=1504354087&sr=1-1&keywords=the+black+swan)
     1. [*The Code Book: Science of Secrecy from Ancient Egypt to Quantum Cryptography* by Simon Singh](https://www.amazon.de/Code-Book-Science-Secrecy-Cryptography/dp/0385495323/ref=tmm_pap_swatch_0?_encoding=UTF8&qid=1505031255&sr=1-3)
     1. [*The Thrilling Adventures of Lovelace and Babbage* by Sydney Padua](https://www.amazon.de/Thrilling-Adventures-Lovelace-Babbage-Computer/dp/0141981539/ref=pd_lpo_sbs_14_t_0?_encoding=UTF8&psc=1&refRID=8YK9ZWZ5HZ919Q87S5TR)
+    1. [*Lock In* by John Scalzi](https://www.amazon.de/Lock-Novel-Future-John-Scalzi/dp/076538132X/ref=sr_1_1?s=books-intl-de&ie=UTF8&qid=1536249077&sr=1-1)
+    1. [*Quality Land* by Marc-Uwe Kling](https://www.amazon.de/QualityLand-Roman-dunkle-Marc-Uwe-Kling/dp/3550050151/ref=sr_1_1?s=books-intl-de&ie=UTF8&qid=1536249190&sr=8-1)
+    1. [*Life 3.0* by Max Tegmark](https://www.amazon.de/Life-3-0-Being-Artificial-Intelligence/dp/0141981806/ref=sr_1_1?s=books-intl-de&ie=UTF8&qid=1536249228&sr=1-1)
+    1. [*Bobiverse* Trilogy by Dennis E. Taylor](https://www.amazon.de/We-Are-Legion-Bob-Bobiverse/dp/1680680587/ref=sr_1_1?s=books-intl-de&ie=UTF8&qid=1536249269&sr=1-1)
+    1. [*Singularity Trap* by Dennis E. Taylor](https://www.amazon.de/Singularity-Trap-English-Dennis-Taylor-ebook/dp/B07FBRRL2Z/ref=tmm_kin_swatch_0?_encoding=UTF8&qid=1536251142&sr=1-1)
+    1. [*Delta-v* by Daniel Suarez](https://www.goodreads.com/book/show/40859000-delta-v)
+    1. [*Murderbot Diaries* by Martha Wells](https://www.goodreads.com/series/191900-the-murderbot-diaries)
+    1. [*First Man* by James R. Hansen](https://www.goodreads.com/book/show/205589.First_Man)
+    1. [*NSA - Nationales Sicherheits-Amt* by Andreas Eschbach](https://de.wikipedia.org/wiki/NSA_%E2%80%93_Nationales_Sicherheits-Amt)
+    1. [*Head On* by John Scalzi](https://www.goodreads.com/book/show/35018901-head-on)
 
 Suggestions for finding other topics:
 
