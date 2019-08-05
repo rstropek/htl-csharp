@@ -16,17 +16,17 @@ namespace Tetris.Tests
 
             Assert.IsTrue(board.TryRotatePiece(RotationDirection.Clockwise));
             Assert.AreEqual(0, board.CurrentCol);
-            foreach (var item in board.CurrentPiece.Pattern.ToEnumerable())
+            foreach (var (row, col, val) in board.CurrentPiece.Pattern.ToEnumerable())
             {
-                Assert.AreEqual(item.val, PiecesMockup.LBarClockwiseRotated[item.row, item.col]);
+                Assert.AreEqual(val, PiecesMockup.LBarClockwiseRotated[row, col]);
             }
 
             // Rotate back
             Assert.IsTrue(board.TryRotatePiece(RotationDirection.CounterClockwise));
             Assert.AreEqual(0, board.CurrentCol);
-            foreach (var item in board.CurrentPiece.Pattern.ToEnumerable())
+            foreach (var (row, col, val) in board.CurrentPiece.Pattern.ToEnumerable())
             {
-                Assert.AreEqual(item.val, PiecesMockup.LBar[item.row, item.col]);
+                Assert.AreEqual(val, PiecesMockup.LBar[row, col]);
             }
         }
 

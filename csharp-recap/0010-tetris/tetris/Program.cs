@@ -16,7 +16,7 @@ namespace Tetris
         public const ConsoleColor BORDER_COLOR = ConsoleColor.Yellow;
         public const ConsoleColor BACKGROUND_COLOR = ConsoleColor.Black;
 
-        static void Main(string[] args)
+        static void Main()
         {
             Console.Clear();
             Console.CursorVisible = false;
@@ -27,7 +27,10 @@ namespace Tetris
             var board = new Board(new BoardContent(BOARD_HEIGHT, BOARD_WIDTH), Pieces.GetRandomPiece);
             board.NewPiece();
             DrawPiece(board.CurrentCol, board.CurrentRow, board.CurrentPiece.Color, board.CurrentPiece.Pattern);
-            DrawPiece(BOARD_WIDTH + 12, 3, board.NextPiece.Color, board.NextPiece.Pattern);
+            if (board.NextPiece != null)
+            {
+                DrawPiece(BOARD_WIDTH + 12, 3, board.NextPiece.Color, board.NextPiece.Pattern);
+            }
 
             try
             {
@@ -77,9 +80,16 @@ namespace Tetris
                     if (!board.IsMovePossible(Direction.Down) || dropped)
                     {
                         board.MergeCurrentPieceIntoBoardContent();
-                        DrawPiece(BOARD_WIDTH + 12, 3, BACKGROUND_COLOR, board.NextPiece.Pattern);
+                        if (board.NextPiece != null)
+                        {
+                            DrawPiece(BOARD_WIDTH + 12, 3, BACKGROUND_COLOR, board.NextPiece.Pattern);
+                        }
+
                         board.NewPiece();
-                        DrawPiece(BOARD_WIDTH + 12, 3, board.NextPiece.Color, board.NextPiece.Pattern);
+                        if (board.NextPiece != null)
+                        {
+                            DrawPiece(BOARD_WIDTH + 12, 3, board.NextPiece.Color, board.NextPiece.Pattern);
+                        }
                     }
                     else
                     {
@@ -99,6 +109,7 @@ namespace Tetris
         }
 
         private static void DrawBorders()
+#pragma warning restore IDE0051 // Remove unused private members
         {
             var oldBackgroundColor = Console.BackgroundColor;
             try
@@ -198,12 +209,11 @@ namespace Tetris
 
                 // QUIZ: What's that? A function inside a function?!
                 // LEARN MORE at https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/local-functions
-                void WriteAt(int left, int top, string text)
+                static void WriteAt(int left, int top, string text)
                 {
                     Console.SetCursorPosition(left, top);
                     Console.Write(text);
                 }
-
 
                 var usageLeft = BORDER_LEFT + BOARD_WIDTH + 10;
                 var usageTop = BORDER_TOP + 10;

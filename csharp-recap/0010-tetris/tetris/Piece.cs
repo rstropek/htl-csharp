@@ -35,16 +35,16 @@ namespace Tetris
         {
             // During rotation, width becomes height and height becomes width
             var rotatedPattern = new bool[Width, Height];
-            foreach(var pixel in Pattern.ToEnumerable())
+            foreach(var (row, col, val) in Pattern.ToEnumerable())
             {
                 // QUIZ: What isn't optimal in terms of performance with this `if`?
                 if (direction == RotationDirection.Clockwise)
                 {
-                    rotatedPattern[pixel.col, rotatedPattern.GetLength(1) - 1 - pixel.row] = pixel.val;
+                    rotatedPattern[col, rotatedPattern.GetLength(1) - 1 - row] = val;
                 }
                 else
                 {
-                    rotatedPattern[rotatedPattern.GetLength(0) - 1 - pixel.col, pixel.row] = pixel.val;
+                    rotatedPattern[rotatedPattern.GetLength(0) - 1 - col, row] = val;
                 }
             }
 
