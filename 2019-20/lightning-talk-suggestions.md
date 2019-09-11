@@ -9,21 +9,18 @@ Here are suggestions for [lightning talk](https://en.wikipedia.org/wiki/Lightnin
     1. Cool things you can do with [*C# Expression Trees*](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/expression-trees/)
     1. Programming with [*immutable objects*](https://en.wikipedia.org/wiki/Immutable_object) in C# and .NET
     1. Compiling and debugging the C# compiler yourself
-    1. [C# Scripting](https://msdn.microsoft.com/en-us/magazine/mt614271.aspx) - what is it and why is it useful?
     1. Cool things you can do with [*dnSpy*](https://github.com/0xd4d/dnSpy)
     1. Working with Microsoft's [*.NET Core Source Browser*](https://source.dot.net/)
     1. What is [*.NET Fiddle*](https://dotnetfiddle.net) and where can it help?
     1. What is the [*LINQPad*](http://www.linqpad.net/) and where can it help?
-    1. What is [*codemaid*](http://www.codemaid.net/) and where can it help?
     1. What is [*Edge.js*](http://tjanczuk.github.io/edge/#/) and what cool things can C# developers do with it?
-    1. What is [*IronPython*](http://ironpython.net/) and what cool things can C# developers do with it?
     1. Why is [*Dapper*](https://github.com/StackExchange/Dapper) useful when writing simple database applications in C#?
     1. Cool things you can do with [*Tuples*](https://docs.microsoft.com/en-us/dotnet/csharp/tuples)
 1. Code Quality, Testing
     1. What are [*SonarQube*](https://www.sonarqube.org/) and [*SonarLint*](http://www.sonarlint.org/index.html)?
     1. What is [*PerfView*](https://github.com/Microsoft/perfview) and how can it help improving application performance?
     1. What is [*BenchmarkDotNet*](https://github.com/dotnet/BenchmarkDotNet) and how can it help improving application performance? 
-    1. What is [*NLog*](http://nlog-project.org/) and why is it useful for .NET developers?
+    1. What is [*Serilog*](https://serilog.net/) and why is it useful for .NET developers?
     1. What can we learn from the [*.NET Foundation Coding Guidelines*](https://github.com/dotnet/corefx/blob/master/Documentation/coding-guidelines/coding-style.md)?
     1. What are Microsoft's [*Framework Design Guidelines*](https://docs.microsoft.com/en-us/dotnet/standard/design-guidelines/) and what can we learn from them?
     1. What is [*moq*](https://github.com/moq/moq4) and why is it useful for automated testing?
@@ -41,24 +38,15 @@ Here are suggestions for [lightning talk](https://en.wikipedia.org/wiki/Lightnin
 1. Openness
     1. Free development tools every .NET developer should know about
     1. Free web services every .NET developer should know about
-    1. What is [*Creative Commons*](https://creativecommons.org/) and how can I benefit from it as a developer?
     1. Free geo-related web services every developer should know about
-    1. What is [*Net Neutrality*](https://en.wikipedia.org/wiki/Net_neutrality) and why is it so heavily discussed?
-    1. What is [*Open Data*](https://en.wikipedia.org/wiki/Open_data) and why is it important for developers?
     1. What is the [*.NET Foundation*](https://dotnetfoundation.org/)?
 1. General
-    1. What is [*Markdown*](https://daringfireball.net/projects/markdown/), why is it useful, and what cool things can you do with it?
     1. Developing in the [*GitHub Flow*](https://guides.github.com/introduction/flow/)
     1. Cool things you can do with [*Fiddler*](http://www.telerik.com/fiddler)
     1. Cool things you can do with [*Postman*](https://www.getpostman.com/)
     1. Cool things you can do with [*Insomnia*](https://insomnia.rest/)
-    1. What every developer should know about the [*Datenschutzgrundverordnung*](https://de.wikipedia.org/wiki/Datenschutz-Grundverordnung)
-    1. [*Subreddits*](https://www.reddit.com/reddits/) that every developer should follow
-    1. What is the [*Ethereum Project*](https://www.ethereum.org/) and why could it be important for us developers in the future
     1. What can we learn from the *NIST* document [*Digital Identity Guidelines*](http://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-63b.pdf) in terms of security?
     1. What can we learn from stackoverflow's [*IT-Recruiter Report*](https://www.stackoverflowbusiness.com/de/talent/ressourcen/der-stack-overflow-it-recruiter-report-2017) for searching our first jobs in IT?
-    1. What is [*Chocolatey*](https://chocolatey.org/) and how can developers make good use of it?
-    1. What is the [*WIX Toolset*](http://wixtoolset.org/) and why should .NET developers know about it?
 1. Why should I read... (**no spoilers!**)
     1. [*Daemon* triology by Daniel Suarez](https://www.amazon.de/Daemon-Daniel-Suarez/dp/0451228731/ref=sr_1_2?ie=UTF8&qid=1500878463&sr=8-2&keywords=daniel+suarez+daemon)
     1. [*Armada* by Ernest Cline](https://www.amazon.de/Armada-Ernest-Cline/dp/0099586746/ref=sr_1_2?ie=UTF8&qid=1500878895&sr=8-2&keywords=armada+ernest+cline)
