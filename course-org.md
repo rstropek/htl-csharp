@@ -29,7 +29,7 @@ Dates, Lightning Talks, Exams, Grading, etc.
 <!-- .slide: class="left" -->
 ## Curriculum 9. Semester
 
-* [Quelle](http://www.htl.at/fileadmin//content/Lehrplan/HTL_VO_262_2015/BGBl_II_Nr_262_2015_Anlage_1.10.pdf)
+* [Quelle](https://www.ris.bka.gv.at/Dokumente/Bundesnormen/NOR40217045/NOR40217045.pdf)
 * Bildungs- und Lehraufgabe:<br/>
 Die Sch&uuml;lerinnen und Sch&uuml;ler k&ouml;nnen
   * verschiedene Softwarearchitekturen beschreiben und f&uuml;r konkrete, in der Praxis auftretende,
@@ -43,7 +43,7 @@ Problemstellungen entsprechende Architekturen erstellen;
 <!-- .slide: class="left" -->
 ## Curriculum 10. Semester
 
-* [Quelle](http://www.htl.at/fileadmin//content/Lehrplan/HTL_VO_262_2015/BGBl_II_Nr_262_2015_Anlage_1.10.pdf)
+* [Quelle](https://www.ris.bka.gv.at/Dokumente/Bundesnormen/NOR40217045/NOR40217045.pdf)
 * Bildungs- und Lehraufgabe:<br/>
 Die Sch&uuml;lerinnen und Sch&uuml;ler k&ouml;nnen
   * komplexe Benutzerschnittstellen unter dem Aspekt der Usability entwerfen und implementieren;
@@ -59,7 +59,7 @@ Die Sch&uuml;lerinnen und Sch&uuml;ler k&ouml;nnen
 * Use Windows, Linux or Mac
   * Windows is the most convenient option
 * Development Environment
-  * [*Visual Studio Community Preview Edition*](https://visualstudio.microsoft.com/vs/preview/) on Windows (most convenient option)
+  * [*Visual Studio Community*](https://visualstudio.microsoft.com/vs/) on Windows (most convenient option)
 * Install at least the following modules:
   * *.NET Core cross-platform development*
   * *ASP.NET and web development*
@@ -121,7 +121,7 @@ Die Sch&uuml;lerinnen und Sch&uuml;ler k&ouml;nnen
 * Random sample is checked
   * No need to be perfect, hand in your best try
   * Earn max. 2 points for a good homework
-  * Minus 2 points for missing homework
+  * Minus 2 points for totally missing homework
 
 
 <!-- .slide: class="left" -->
@@ -136,10 +136,10 @@ Die Sch&uuml;lerinnen und Sch&uuml;ler k&ouml;nnen
 
 ## Grading
 
-| Grade  | Min. points (incl.)
+| Grade  | Min. Percentage (incl.)
 |--------|---------------------
-| 1      | 91
+| 1      | 89
 | 2      | 76
-| 3      | 61
+| 3      | 63
 | 4      | 50
 | 5      | Less than 50 points
