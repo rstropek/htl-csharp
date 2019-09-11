@@ -28,6 +28,14 @@ steps:
     overWrite: true
   displayName: 'Copy build result to temp'
 
+- task: CopyFiles@2
+  inputs:
+    contents: .gitignore
+    targetFolder: $(Agent.TempDirectory)/dist
+    cleanTargetFolder: false
+    overWrite: true
+  displayName: 'Copy .gitignore to temp'
+
 - script: |
     git checkout gh-pages
   displayName: 'Switch to gh-pages branch'
