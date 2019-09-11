@@ -18,6 +18,7 @@ steps:
 - script: |
     npm install
     npm run build
+    rm package-lock.json
   displayName: 'Build'
 
 - task: CopyFiles@2
