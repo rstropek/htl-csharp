@@ -53,6 +53,7 @@ Die Sch&uuml;lerinnen und Sch&uuml;ler k&ouml;nnen
   * Anwendung aktueller Softwaretechnologien, Erstellung von Frameworks, Softwarequalit&auml;t Performance-Tests.
 
 
+<!-- .slide: class="left" -->
 ## Necessary Software
 
 * We focus on open-source, platform-independent development
@@ -142,4 +143,4 @@ Die Sch&uuml;lerinnen und Sch&uuml;ler k&ouml;nnen
 | 2      | 76
 | 3      | 63
 | 4      | 50
-| 5      | Less than 50 points
+| 5      | Less than 50 perc.
