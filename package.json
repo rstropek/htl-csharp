@@ -5,13 +5,14 @@
   "main": "index.html",
   "dependencies": {},
   "devDependencies": {
-    "concurrently": "^3.5.0",
-    "del": "^3.0.0",
-    "gulp": "^3.9.1",
+    "concurrently": "^4.1.2",
+    "del": "^5.1.0",
+    "gulp": "^4.0.2",
+    "gulp-line-ending-corrector": "^1.0.3",
     "gulp-ssi": "^0.1.3",
-    "jquery": "^3.2.1",
-    "reveal.js": "^3.5.0",
-    "serve": "^6.0.2"
+    "jquery": "^3.4.1",
+    "reveal.js": "^3.8.0",
+    "serve": "^11.1.0"
   },
   "scripts": {
     "clean": "gulp clean",
