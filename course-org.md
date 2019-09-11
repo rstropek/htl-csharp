@@ -60,7 +60,7 @@ Die Sch&uuml;lerinnen und Sch&uuml;ler k&ouml;nnen
 * Use Windows, Linux or Mac
   * Windows is the most convenient option
 * Development Environment
-  * [*Visual Studio Community*](https://visualstudio.microsoft.com/vs/) on Windows (most convenient option)
+  * [*Visual Studio 2019 Community*](https://visualstudio.microsoft.com/vs/) on Windows (most convenient option)
 * Install at least the following modules:
   * *.NET Core cross-platform development*
   * *ASP.NET and web development*
