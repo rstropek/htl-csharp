@@ -1,0 +1,44 @@
+trigger:
+- master
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+- checkout: self
+  persistCredentials: true
+  clean: true
+  displayName: 'Checkout'
+
+- script: |
+    git config --global user.email "rainer@software-architects.at"
+    git config --global user.name "Rainer"
+  displayName: 'Git Settings'
+
+- script: |
+    npm install
+    npm run build
+  displayName: 'Build'
+
+- task: CopyFiles@2
+  inputs:
+    sourceFolder: dist
+    targetFolder: $(Agent.TempDirectory)/dist
+    cleanTargetFolder: true
+    overWrite: true
+  displayName: 'Copy build result to temp'
+
+- script: |
+    git checkout gh-pages
+  displayName: 'Switch to gh-pages branch'
+
+- task: CopyFiles@2
+  inputs:
+    sourceFolder: $(Agent.TempDirectory)/dist
+    targetFolder: .
+    overWrite: true
+  displayName: 'Copy build results to gh-pages branch'
+
+- script: |
+    git push origin gh-pages
+  displayName: 'Git push gh-pages branch'
