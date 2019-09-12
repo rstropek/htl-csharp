@@ -10,7 +10,7 @@
 | 21.11. |           |       |
 | 28.11. |           |       |
 | 12.12. |           |       |
-| 09.01. |           |       |
+| 09.01. | Kathrin Reißner | What is .NET Fiddle and where can it help? |
 | 16.01. |           |       |
 | 30.01. |           |       |
 | 06.02. |           |       |
