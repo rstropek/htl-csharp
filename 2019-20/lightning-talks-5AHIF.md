@@ -5,7 +5,7 @@
 | 19.09. |           |       |
 | 03.10. |           |       |
 | 10.10. |           |       |
-| 24.10. | not-matthias |       |
+| 24.10. | not-matthias | Reverse Engineering C# Applications |
 | 14.11. |           |       |
 | 21.11. |           |       |
 | 28.11. |           |       |
