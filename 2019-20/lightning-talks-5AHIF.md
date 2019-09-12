@@ -6,8 +6,8 @@
 | 03.10. |           |       |
 | 10.10. |           |       |
 | 24.10. |           |       |
-| 14.11. | lukas-tr          | Machine Learning + Python      |
-| 21.11. |           |       |
+| 14.11. |           |       |
+| 21.11. | lukas-tr          | Machine Learning + Python      |
 | 28.11. |           |       |
 | 12.12. |           |       |
 | 09.01. |           |       |
