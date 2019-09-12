@@ -8,7 +8,7 @@
 | 24.10. |           |       |
 | 14.11. |           |       |
 | 21.11. |           |       |
-| 28.11. |           |       |
+| 28.11. |renestadler|Why should you read: Ready Player One by Ernest Cline|
 | 12.12. |           |       |
 | 09.01. |           |       |
 | 16.01. |           |       |
