@@ -9,7 +9,7 @@
 | 14.11. |           |       |
 | 21.11. |           |       |
 | 28.11. |           |       |
-| 12.12. |           |       |
+| 12.12. | Philipp Brandstetter | Cool things you can do with dnSpy |
 | 09.01. |           |       |
 | 16.01. |           |       |
 | 30.01. |           |       |
