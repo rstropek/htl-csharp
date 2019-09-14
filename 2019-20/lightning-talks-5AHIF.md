@@ -4,7 +4,7 @@
 | ------ | --------- | ----- |
 | 19.09. |           |       |
 | 03.10. |           |       |
-| 10.10. |           |       |
+| 10.10. | Pallinger | Armada by Ernest Cline |
 | 24.10. | not-matthias | Reverse Engineering C# Applications |
 | 14.11. |Lukas R.   |       |
 | 21.11. | lukas-tr          | Machine Learning + Python      |
