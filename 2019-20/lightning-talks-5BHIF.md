@@ -15,7 +15,7 @@
 | 30.01. |           |       |
 | 06.02. |           |       |
 | 27.02. | Peter Leitner | Free development tools every .NET developer should know about |
-| 05.03. |           |       |
+| 05.03. |  Felix Leibetseder |   Free web services every .NET developer should know about   |
 | 12.03. |           |       |
 | 19.03. |           |       |
 | 26.03. |           |       |
