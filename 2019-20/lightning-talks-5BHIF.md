@@ -11,7 +11,7 @@
 | 28.11. |           |       |
 | 12.12. |           |       |
 | 09.01. |           |       |
-| 16.01. |           |       |
+| 16.01. |Michael Hitzker|What are SonarQube and SonarLint?|
 | 30.01. |           |       |
 | 06.02. |           |       |
 | 27.02. | Peter Leitner | Free development tools every .NET developer should know about |
