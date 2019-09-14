@@ -8,7 +8,7 @@
 | 24.10. | not-matthias | Reverse Engineering C# Applications |
 | 14.11. |Lukas R.   |       |
 | 21.11. | lukas-tr          | Machine Learning + Python      |
-| 28.11. |           |       |
+| 28.11. |  Florian Hitzler         |  .NET Fiddle     |
 | 12.12. |           |       |
 | 09.01. |           |       |
 | 16.01. |           |       |
