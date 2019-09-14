@@ -12,7 +12,7 @@
 | 12.12. | Philipp Brandstetter | Cool things you can do with dnSpy |
 | 09.01. | Thomas Brych | Cool things you can do with Postman |
 | 16.01. |Michael Hitzker|What are SonarQube and SonarLint?|
-| 30.01. |           |       |
+| 30.01. |Tim Klecka|Developing in the GitHub Flow
 | 06.02. |           |       |
 | 27.02. | Peter Leitner | Free development tools every .NET developer should know about |
 | 05.03. |  Felix Leibetseder |   Free web services every .NET developer should know about   |
