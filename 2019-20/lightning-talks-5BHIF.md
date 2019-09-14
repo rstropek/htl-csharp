@@ -8,7 +8,7 @@
 | 24.10. |           |       |
 | 14.11. |           |       |
 | 21.11. |           |       |
-| 28.11. |           |       |
+| 28.11. |renestadler|Why should you read: Ready Player One by Ernest Cline|
 | 12.12. |           |       |
 | 09.01. | Thomas Brych | Cool things you can do with Postman |
 | 16.01. |Michael Hitzker|What are SonarQube and SonarLint?|
