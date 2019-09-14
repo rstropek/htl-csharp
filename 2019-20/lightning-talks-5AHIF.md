@@ -10,9 +10,9 @@
 | 21.11. | lukas-tr          | Machine Learning + Python      |
 | 28.11. |  Florian Hitzler         |  .NET Fiddle     |
 | 12.12. | AS        |       |
-| 09.01. |           |       |
-| 16.01. |           |       |
-| 30.01. |           |       |
+| 09.01. |Gusenbauer |What does asynchronous programming with observable streams mean and how can ReactiveX help to implement it?|
+| 16.01. |Brunner A  |Developing in the GitHub Flow|
+| 30.01. |Friedl F   |Cool things you can do with Postman|
 | 06.02. |           |       |
 | 27.02. |           |       |
 | 05.03. |Katrin H.  | What are Microsoft's Framework Design Guidelines and what can we learn from them? |
