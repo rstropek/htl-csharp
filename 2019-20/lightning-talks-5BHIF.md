@@ -1,4 +1,4 @@
-# Lightning Talks 5AHIF 2019/20
+# Lightning Talks 5BHIF 2019/20
 
 |  Date  | Presenter | Topic |
 | ------ | --------- | ----- |
@@ -14,7 +14,7 @@
 | 16.01. |           |       |
 | 30.01. |           |       |
 | 06.02. |           |       |
-| 27.02. |           |       |
+| 27.02. | Peter Leitner | Free development tools every .NET developer should know about |
 | 05.03. |  Felix Leibetseder |   Free web services every .NET developer should know about   |
 | 12.03. |           |       |
 | 19.03. |           |       |
