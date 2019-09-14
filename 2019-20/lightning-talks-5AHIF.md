@@ -15,9 +15,9 @@
 | 30.01. |           |       |
 | 06.02. |           |       |
 | 27.02. |           |       |
-| 05.03. |           |       |
-| 12.03. |           |       |
-| 19.03. |           |       |
+| 05.03. |Katrin H.  | What are Microsoft's Framework Design Guidelines and what can we learn from them? |
+| 12.03. |Patrick W. | F#    |
+| 19.03. |Christina L.|       |
 | 26.03. |           |       |
 | 23.04. |           |       |
 | 30.04. |           |       |
