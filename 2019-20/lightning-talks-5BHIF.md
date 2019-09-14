@@ -1,4 +1,4 @@
-# Lightning Talks 5AHIF 2019/20
+# Lightning Talks 5BHIF 2019/20
 
 |  Date  | Presenter | Topic |
 | ------ | --------- | ----- |
