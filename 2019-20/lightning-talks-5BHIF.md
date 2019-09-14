@@ -14,7 +14,7 @@
 | 16.01. |           |       |
 | 30.01. |           |       |
 | 06.02. |           |       |
-| 27.02. |           |       |
+| 27.02. | Peter Leitner | Free development tools every .NET developer should know about |
 | 05.03. |           |       |
 | 12.03. |           |       |
 | 19.03. |           |       |
