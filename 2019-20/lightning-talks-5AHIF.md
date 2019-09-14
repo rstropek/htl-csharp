@@ -13,7 +13,7 @@
 | 09.01. | Gusenbauer      | What does asynchronous programming with observable streams mean and how can ReactiveX help to implement it? |
 | 16.01. | Brunner A       | Developing in the GitHub Flow                                                                               |
 | 30.01. | Friedl F        | Cool things you can do with Postman                                                                         |
-| 06.02. |                 |                                                                                                             |
+| 06.02. | Daniel Hofer    |                                                                                                             |
 | 27.02. |                 |                                                                                                             |
 | 05.03. | Katrin H.       | What are Microsoft's Framework Design Guidelines and what can we learn from them?                           |
 | 12.03. | Patrick W.      | F#                                                                                                          |
