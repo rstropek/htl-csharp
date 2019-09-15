@@ -24,6 +24,7 @@ Dates, Lightning Talks, Exams, Grading, etc.
 * [Online Course Calendar](https://github.com/rstropek/htl-csharp/blob/master/2019-20/dates.md)
 * [Get Course Material](https://github.com/rstropek/htl-csharp/) from GitHub
   * Feel free to contribute
+* [Watch course recordings on YouTube](https://www.youtube.com/playlist?list=PLhGL9p3BWHwtV_hn6H_uZ4vrFE3F7mY8a)
 
 
 <!-- .slide: class="left" -->
