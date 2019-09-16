@@ -14,7 +14,7 @@
 | 16.01. | Brunner A       | Developing in the GitHub Flow                                                                               |
 | 30.01. | Friedl F        | Cool things you can do with Postman                                                                         |
 | 06.02. | Daniel Hofer    |                                                                                                             |
-| 27.02. |                 |                                                                                                             |
+| 27.02. | Jakob Aschauer  | What is Roslyn?                                                                                             |
 | 05.03. | Katrin H.       | What are Microsoft's Framework Design Guidelines and what can we learn from them?                           |
 | 12.03. | Patrick W.      | F#                                                                                                          |
 | 19.03. | Christina L.    |                                                                                                             |
