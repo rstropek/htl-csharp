@@ -18,6 +18,6 @@
 | 05.03. | Katrin H.       | What are Microsoft's Framework Design Guidelines and what can we learn from them?                           |
 | 12.03. | Patrick W.      | F#                                                                                                          |
 | 19.03. | Christina L.    |                                                                                                             |
-| 26.03. |                 |                                                                                                             |
+| 26.03. | Samuel Lange    | Clean Code                                                                                                  |
 | 23.04. |                 |                                                                                                             |
 | 30.04. |                 |                                                                                                             |
