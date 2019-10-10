@@ -11,6 +11,7 @@
 | 28.11. | Florian Hitzler | .NET Fiddle                                                                                                 |
 | 12.12. | AS              |                                                                                                             |
 | 09.01. | Gusenbauer      | What does asynchronous programming with observable streams mean and how can ReactiveX help to implement it? |
+|        | Kathrin R.      | Turning C# XML Documentation Comments into a professional documentation site with DocFX
 | 16.01. | Brunner A       | Developing in the GitHub Flow                                                                               |
 | 30.01. | Friedl F        | Cool things you can do with Postman                                                                         |
 | 06.02. | Daniel Hofer    |                                                                                                             |
