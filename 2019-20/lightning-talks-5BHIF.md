@@ -7,7 +7,7 @@
 | 10.10. | Martin Böhm          | What is Edge.js and what cool things can C# developers do with it? |
 | 24.10. |                      |                                                                    |
 | 14.11. |                      |                                                                    |
-| 21.11. |                      |                                                                    |
+| 21.11. | Jakob Strasser       | What is the .NET Foundation?                                       |
 | 28.11. | renestadler          | Why should you read: Ready Player One by Ernest Cline              |
 | 12.12. | Philipp Brandstetter | Cool things you can do with dnSpy                                  |
 | 09.01. | Thomas Brych         | Cool things you can do with Postman                                |
