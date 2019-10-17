@@ -81,3 +81,13 @@ The folder [*TestData*](TestData) contains files that you can use for testing. H
 Demonstrate the correct combining of files without error handling and you will get one extra point.
 
 Demonstrate correct results for all the test cases above including error handling and you will get two extra points.
+
+## Extra Challenges
+
+### Generic Host
+
+If you want to have an extra challenge, use .NET Core's 3 [*generic host*](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/host/generic-host) and inject the combination logic using *dependency injection*.
+
+### Tests
+
+Want another extra challenge? Write [*xUnit* unit tests](https://docs.microsoft.com/en-us/dotnet/core/testing/unit-testing-with-dotnet-test) for the combination logic.
