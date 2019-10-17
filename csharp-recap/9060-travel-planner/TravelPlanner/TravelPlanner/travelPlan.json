@@ -1,0 +1,112 @@
+[
+    {
+        "City": "Salzburg",
+        "ToLinz": [
+            {
+                "Leave": "09:00",
+                "Arrive": "10:45"
+            },
+            {
+                "Leave": "11:00",
+                "Arrive": "12:15"
+            },
+            {
+                "Leave": "13:00",
+                "Arrive": "14:15"
+            },
+            {
+                "Leave": "15:00",
+                "Arrive": "16:45"
+            }
+        ],
+        "FromLinz": [
+            {
+                "Leave": "11:00",
+                "Arrive": "12:15"
+            },
+            {
+                "Leave": "12:30",
+                "Arrive": "13:45"
+            },
+            {
+                "Leave": "14:30",
+                "Arrive": "16:00"
+            },
+            {
+                "Leave": "17:00",
+                "Arrive": "18:45"
+            }
+        ]
+    },
+    {
+        "City": "Vienna",
+        "ToLinz": [
+            {
+                "Leave": "08:00",
+                "Arrive": "10:30"
+            },
+            {
+                "Leave": "11:00",
+                "Arrive": "13:15"
+            },
+            {
+                "Leave": "14:00",
+                "Arrive": "16:30"
+            },
+            {
+                "Leave": "17:00",
+                "Arrive": "19:15"
+            }
+        ],
+        "FromLinz": [
+            {
+                "Leave": "11:00",
+                "Arrive": "13:15"
+            },
+            {
+                "Leave": "13:30",
+                "Arrive": "15:45"
+            },
+            {
+                "Leave": "16:45",
+                "Arrive": "19:00"
+            },
+            {
+                "Leave": "19:30",
+                "Arrive": "21:45"
+            }
+        ]
+    },
+    {
+        "City": "Graz",
+        "ToLinz": [
+            {
+                "Leave": "06:00",
+                "Arrive": "09:00"
+            },
+            {
+                "Leave": "12:00",
+                "Arrive": "15:00"
+            },
+            {
+                "Leave": "16:00",
+                "Arrive": "19:00"
+            }
+        ],
+        "FromLinz": [
+            {
+                "Leave": "10:00",
+                "Arrive": "13:00"
+            },
+            {
+                "Leave": "15:30",
+                "Arrive": "18:30"
+            },
+            {
+                "Leave": "19:30",
+                "Arrive": "22:30"
+            }
+        ]
+    }
+
+]
