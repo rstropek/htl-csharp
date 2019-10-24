@@ -3,11 +3,11 @@
 
 ## Install EF Core
 
-* [Documentation...](https://docs.microsoft.com/en-us/ef/core/get-started/install/)
+* [Documentation...](https://docs.microsoft.com/en-us/ef/core/get-started/)
 
+* Install EF Tools globally: `dotnet tool install --global dotnet-ef`
 * `dotnet add package Microsoft.EntityFrameworkCore.SqlServer`
   * [Choose your DB provider...](https://docs.microsoft.com/en-us/ef/core/providers/)
-* Add `<ItemGroup><DotNetCliToolReference Include="Microsoft.EntityFrameworkCore.Tools.DotNet" Version="2.0.0" /></ItemGroup>` to *.csproj* file
 * `dotnet add package Microsoft.EntityFrameworkCore.Design`
 
 
@@ -29,9 +29,9 @@
 * Configure your model using...
   * ...*Fluent API* in [`DbContext.OnModelCreating`](https://docs.microsoft.com/en-us/dotnet/api/microsoft.entityframeworkcore.dbcontext.onmodelcreating) or
   * ...*Data Annotations*
-  * [Documentation...](https://docs.microsoft.com/en-us/ef/core/modeling/#methods-of-configuration)
+  * [Documentation...](https://docs.microsoft.com/en-us/ef/core/modeling/#use-fluent-api-to-configure-a-model)
 
-```
+```csharp
 // Fluent API Example:
 
 class MyContext : DbContext
@@ -47,7 +47,7 @@ class MyContext : DbContext
 }
 ```
 
-```
+```csharp
 // Data Annotations Example:
 
 public class Blog
@@ -65,7 +65,7 @@ public class Blog
 
 * Create *appsettings.json* file:
 
-```
+```json
 {
   "ConnectionStrings": {
     "DefaultConnection": "Server=(localdb)\\dev;Database=AddressBook;Trusted_Connection=True"
@@ -75,7 +75,7 @@ public class Blog
 
 * Read connection string in ASP.NET Core's startup class:
 
-```
+```csharp
 public class Startup
 {
     private IConfiguration configuration;
@@ -104,7 +104,7 @@ public class Startup
 
 * `DbContextOptions` in Constructor:
 
-```
+```csharp
 public class BloggingContext : DbContext
 {
     public BloggingContext(DbContextOptions<BloggingContext> options)
@@ -117,7 +117,7 @@ public class BloggingContext : DbContext
 
 * Add `DbContext` to ASP.NET Core Dependency Injection:
 
-```
+```csharp
 public void ConfigureServices(IServiceCollection services)
 {
     services.AddDbContext<BloggingContext>(options => options.UseSqlServer(
@@ -127,10 +127,9 @@ public void ConfigureServices(IServiceCollection services)
 
 * Option: Add logging ([documentation...](https://docs.microsoft.com/en-us/ef/core/miscellaneous/logging))
 
-```
-public static readonly LoggerFactory MyLoggerFactory
-    = new LoggerFactory(new[] {new ConsoleLoggerProvider((_, __) => true, true)});
-
+```csharp
+public static readonly ILoggerFactory MyLoggerFactory
+    = LoggerFactory.Create(builder => { builder.AddConsole(); });
 ...
 
 protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -142,30 +141,30 @@ protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 
 * [Documentation](https://docs.microsoft.com/en-us/ef/core/querying/)
 
-| Task | Operation |
-|------|------|
-| Load all data | `ToListAsync` |
-| Load single row | `Single` |
-| Filter | `Where` |
+|       Task        |                    Operation                    |
+| ----------------- | ----------------------------------------------- |
+| Load all data     | `ToListAsync`                                   |
+| Load single row   | `Single`                                        |
+| Filter            | `Where`                                         |
 | Load related data | `Include`, `ThenInclude`, `Entry`, `Collection` |
-| No-tracking query | `AsNoTracking` |
-| Raw SQL queries | `FromSql` |
-| Sorting | `OrderBy`, `OrderByDescending` |
+| No-tracking query | `AsNoTracking`                                  |
+| Raw SQL queries   | `FromSql`                                       |
+| Sorting           | `OrderBy`, `OrderByDescending`                  |
 
 
 ## Saving Data
 
 * [Documentation](https://docs.microsoft.com/en-us/ef/core/saving/)
 
-| Task | Operation |
-|------|------|
-| Add instance | `Add` |
-| Delete instance | `Remove` |
-| Save | `SaveChangesAsync` |
+|      Task       |     Operation      |
+| --------------- | ------------------ |
+| Add instance    | `Add`              |
+| Delete instance | `Remove`           |
+| Save            | `SaveChangesAsync` |
 
 * Transactions:
 
-```
+```csharp
 using (var transaction = context.Database.BeginTransaction())
 {
     try
@@ -194,5 +193,3 @@ using (var transaction = context.Database.BeginTransaction())
 * Update target database: `dotnet ef database update`
 * Remove last Migration: `dotnet ef migrations remove`
 * Generate SQL script from Migrations: `dotnet ef migrations script`
-
-
