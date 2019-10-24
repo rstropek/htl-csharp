@@ -1,9 +1,6 @@
-﻿using Microsoft.EntityFrameworkCore.Metadata;
-using Microsoft.EntityFrameworkCore.Migrations;
-using System;
-using System.Collections.Generic;
+﻿using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace EntityFrameworkWebApi.Migrations
+namespace _0020_web_api_new.Migrations
 {
     public partial class InitialCreate : Migration
     {
@@ -14,7 +11,7 @@ namespace EntityFrameworkWebApi.Migrations
                 columns: table => new
                 {
                     GroupID = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                        .Annotation("SqlServer:Identity", "1, 1"),
                     Name = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
@@ -27,10 +24,10 @@ namespace EntityFrameworkWebApi.Migrations
                 columns: table => new
                 {
                     PersonID = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                        .Annotation("SqlServer:Identity", "1, 1"),
                     FirstName = table.Column<string>(nullable: true),
-                    GroupID = table.Column<int>(nullable: false),
-                    LastName = table.Column<string>(nullable: true)
+                    LastName = table.Column<string>(nullable: true),
+                    GroupID = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
                 {

@@ -7,9 +7,9 @@ using EntityFrameworkWebApi.Models;
 
 namespace EntityFrameworkWebApi.Controllers
 {
-    [Produces("application/json")]
+    [ApiController]
     [Route("api/groups")]
-    public class GroupsController : Controller
+    public class GroupsController : ControllerBase
     {
         private readonly AddressBookContext context;
 
@@ -17,7 +17,7 @@ namespace EntityFrameworkWebApi.Controllers
         {
             // Note that ASP.NET will automatically provide a DB context
             // via constructor injection. For details about ASP.NET DI see
-            // https://docs.microsoft.com/en-us/ef/core/get-started/aspnetcore/new-db#register-your-context-with-dependency-injection
+            // https://docs.microsoft.com/en-us/aspnet/core/data/ef-rp/intro?view=aspnetcore-3.0#startupcs
             this.context = context;
         }
 

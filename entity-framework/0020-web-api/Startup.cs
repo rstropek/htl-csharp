@@ -1,29 +1,34 @@
-﻿using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.EntityFrameworkCore;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 using EntityFrameworkWebApi.Models;
-using Newtonsoft.Json;
-using AutoMapper;
+using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Logging.Console;
+using Newtonsoft.Json;
 
-namespace EntityFrameworkWebApi
+namespace _0020_web_api_new
 {
     public class Startup
     {
-        private IConfiguration configuration;
-
         public Startup(IConfiguration configuration)
         {
-            this.configuration = configuration;
+            Configuration = configuration;
         }
 
+        public IConfiguration Configuration { get; }
+
+        // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddMvc()
-                .AddJsonOptions(options =>
+            services.AddControllers()
+                .AddNewtonsoftJson(options =>
                 {
                     // Configure JSON serialization so that it ignores loops
                     options.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore;
@@ -31,23 +36,25 @@ namespace EntityFrameworkWebApi
 
             // We use SQL Server Express LocalDB for this example
             services.AddDbContext<AddressBookContext>(options => options.UseSqlServer(
-                configuration["ConnectionStrings:DefaultConnection"]));
-
-            // Configure AutoMapper, a very useful component for copying data
-            // between objects. For details see http://automapper.org/
-            var config = new MapperConfiguration(cfg => cfg.CreateMissingTypeMaps = true);
-            var mapper = config.CreateMapper();
-            services.AddSingleton<IMapper>(mapper);
+                Configuration["ConnectionStrings:DefaultConnection"]));
         }
 
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
             }
 
-            app.UseMvc();
+            app.UseRouting();
+
+            app.UseAuthorization();
+
+            app.UseEndpoints(endpoints =>
+            {
+                endpoints.MapControllers();
+            });
         }
     }
 }

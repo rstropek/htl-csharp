@@ -14,17 +14,21 @@ O/RM in .NET Core
   * PostgreSQL
   * MySQL
   * In-Memory (for testing)
-* Latest version: *EF Core 2.0*
+* Latest version: *EF Core 3.0*
 * NuGet (example): [*Microsoft.EntityFrameworkCore.SqlServer*](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore.SqlServer/)
 
 
 <!-- .slide: class="left" -->
 ## Getting Started
 
-* Follow [*installing* docs](https://docs.microsoft.com/en-us/ef/core/get-started/install/index) to add EF to project
+* Follow [*installing* docs](https://docs.microsoft.com/en-us/ef/core/get-started/) to add EF to project
+  * Make sure to install global EF tools: `dotnet tool install --global dotnet-ef`
 * Work through [tutorials](https://docs.microsoft.com/en-us/ef/core/get-started/) in EF docs
+  * [Tutorial for ASP.NET Core](https://docs.microsoft.com/en-us/aspnet/core/data/ef-rp/intro)
 * Tips:
-  * Install and use [SQL Server 2017 Developer Edition](https://www.microsoft.com/en-us/sql-server/sql-server-downloads) or [SQL Server 2017 Express LocalDB](https://docs.microsoft.com/en-us/sql/database-engine/configure-windows/sql-server-2016-express-localdb)
+  * Run local [SQL Server using Docker](https://hub.docker.com/_/microsoft-mssql-server):<br/>
+    `docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=yourStrong(!)Password' -e 'MSSQL_PID=Express' -p 1433:1433 -d mcr.microsoft.com/mssql/server`
+  * Install and use free [SQL Server Developer Edition](https://www.microsoft.com/en-us/sql-server/sql-server-downloads) or [SQL Server 2017 Express LocalDB](https://docs.microsoft.com/en-us/sql/database-engine/configure-windows/sql-server-2016-express-localdb)
   * Use [In-Memory DB](https://docs.microsoft.com/en-us/ef/core/providers/in-memory/) for simple test scenarios
 
 

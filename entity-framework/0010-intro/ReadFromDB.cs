@@ -9,8 +9,9 @@ namespace EFIntro
     {
         async static Task ReadFromDB(AddressBookContext db) 
         {
-            foreach(var person in await db.Persons
-                .Where(p => p.LastName.StartsWith("B")).ToArrayAsync())
+            await foreach(var person in db.Persons
+                .Where(p => p.LastName.StartsWith("B"))
+                .AsAsyncEnumerable())
             {
                 Console.WriteLine($"{person.LastName}, {person.FirstName}");
             }

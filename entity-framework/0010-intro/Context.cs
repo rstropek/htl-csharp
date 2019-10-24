@@ -6,9 +6,9 @@ namespace EFIntro
     {
         public DbSet<Person> Persons { get; set; }
 
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        protected override void OnConfiguring(DbContextOptionsBuilder options)
         {
-            optionsBuilder.UseInMemoryDatabase("AddressBook");
+            options.UseInMemoryDatabase("AddressBook");
         }
     }
 }

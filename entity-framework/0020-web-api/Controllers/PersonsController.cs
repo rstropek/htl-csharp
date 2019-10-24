@@ -4,21 +4,18 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using EntityFrameworkWebApi.Models;
-using AutoMapper;
 
 namespace EntityFrameworkWebApi.Controllers
 {
-    [Produces("application/json")]
+    [ApiController]
     [Route("api/Persons")]
-    public class PersonsController : Controller
+    public class PersonsController : ControllerBase
     {
         private readonly AddressBookContext context;
-        private readonly IMapper mapper;
 
-        public PersonsController(AddressBookContext context, IMapper mapper)
+        public PersonsController(AddressBookContext context)
         {
             this.context = context;
-            this.mapper = mapper;
         }
 
         [HttpGet]
@@ -28,11 +25,11 @@ namespace EntityFrameworkWebApi.Controllers
             // Exercise: Turn on logging (see AddressBookContext.cs) and review SQL statement(s)
             context.Persons
                 .Include(p => p.Group)
-                .Select(p => mapper.Map<PersonListResult>(new
+                .Select(p => (new PersonListResult
                 {
-                    p.PersonID,
-                    p.FirstName,
-                    p.LastName,
+                    PersonID = p.PersonID,
+                    FirstName = p.FirstName,
+                    LastName = p.LastName,
                     GroupName = p.Group.Name
                 }));
 
@@ -41,11 +38,11 @@ namespace EntityFrameworkWebApi.Controllers
         {
             var person = await context.Persons
                 .Include(p => p.Group)
-                .Select(p => new
+                .Select(p => new PersonListResult
                 {
-                    p.PersonID,
-                    p.FirstName,
-                    p.LastName,
+                    PersonID = p.PersonID,
+                    FirstName = p.FirstName,
+                    LastName = p.LastName,
                     GroupName = p.Group.Name
                 })
                 .SingleOrDefaultAsync(m => m.PersonID == id);
@@ -55,7 +52,7 @@ namespace EntityFrameworkWebApi.Controllers
                 return NotFound();
             }
 
-            return Ok(mapper.Map<PersonListResult>(person));
+            return Ok(person);
         }
 
         [HttpPut("{id}")]

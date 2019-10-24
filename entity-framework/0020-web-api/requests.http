@@ -1,0 +1,48 @@
+GET http://localhost:5000/api/groups
+
+###
+POST http://localhost:5000/api/groups
+Content-Type: application/json
+
+{
+    "name": "Foo Bar"
+}
+
+###
+PUT http://localhost:5000/api/groups/1
+Content-Type: application/json
+
+{
+    "groupID": 1,
+    "name": "Fooo Barr"
+}
+
+###
+DELETE http://localhost:5000/api/groups/1
+
+###
+GET http://localhost:5000/api/persons
+
+###
+POST http://localhost:5000/api/persons
+Content-Type: application/json
+
+{
+    "firstName": "Foo",
+    "lastName": "Bar",
+    "groupID": 2
+}
+
+###
+PUT http://localhost:5000/api/persons/3
+Content-Type: application/json
+
+{
+    "personID": 3,
+    "firstName": "Fooo",
+    "lastName": "Barr",
+    "groupID": 2
+}
+
+###
+DELETE http://localhost:5000/api/persons/3

@@ -8,8 +8,8 @@ namespace EntityFrameworkWebApi.Models
     {
         // Create a logger factory for logging to console. For details see
         // https://docs.microsoft.com/en-us/ef/core/miscellaneous/logging
-        public static readonly LoggerFactory DbLoggerFactory
-            = new LoggerFactory(new[] { new ConsoleLoggerProvider((_, __) => true, true) });
+        public static readonly ILoggerFactory DbLoggerFactory
+            = LoggerFactory.Create(builder => { builder.AddConsole(); });
 
         public AddressBookContext(DbContextOptions<AddressBookContext> options)
             : base(options)
