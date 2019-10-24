@@ -2,7 +2,7 @@
 
 ## Note
 
-In this exercise, you will create a Web API that we will use during many of the exercises in the second semester. Therefore, it is **very important** that everybody completes this exercise correctly. Additionally, this exercise is **very relevant** as an exercise for your upcoming *Matura*.
+In this exercise, you will create a Web API that we will use during upcoming exercises. Therefore, it is **important** that everybody completes this exercise correctly. Additionally, this exercise is **very relevant** as an exercise for your upcoming *Matura*.
 
 You can earn **up to two extra points** for your grade:
 
