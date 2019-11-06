@@ -136,6 +136,18 @@ protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     => optionsBuilder.UseLoggerFactory(MyLoggerFactory);
 ```
 
+* Option: Switch to *Newtonsoft.Json* by installing the `Microsoft.AspNetCore.Mvc.NewtonsoftJson` NuGet package and adding the following code to *Startup.cs* ([documentation...](https://docs.microsoft.com/en-us/aspnet/core/migration/22-to-30?view=aspnetcore-3.0&tabs=visual-studio#jsonnet-support)):
+
+```csharp
+public void ConfigureServices(IServiceCollection services)
+{
+    ...
+    services.AddControllers().AddNewtonsoftJson(settings =>
+        settings.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore);
+    ...
+}
+```
+
 
 ## Query Data
 
