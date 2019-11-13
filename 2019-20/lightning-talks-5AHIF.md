@@ -10,6 +10,7 @@
 | 21.11. | lukas-tr        | Machine Learning + Python                                                                                   |
 | 28.11. | Florian Hitzler | .NET Fiddle                                                                                                 |
 | 12.12. | AS              | C# 8: Nullable References                                                                                   |
+| 12.12. | Jürgen Riegler  | What is Vim and why should you use it?                                                                                  |
 | 09.01. | Gusenbauer      | What does asynchronous programming with observable streams mean and how can ReactiveX help to implement it? |
 |        | Kathrin R.      | Turning C# XML Documentation Comments into a professional documentation site with DocFX
 | 16.01. | Brunner A       | Developing in the GitHub Flow                                                                               |
