@@ -1,0 +1,163 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+    <CodeSnippet Format="1.0.0">
+        <Header>
+            <Title>Genre Entity</Title>
+        </Header>
+        <Snippet>
+            <Code Language="CSharp">
+                <![CDATA[public class Genre
+{
+    public int GenreID { get; set; }
+
+    [Required]
+    [MaxLength(50)]
+    public string GenreTitle { get; set; }
+
+    public List<Book> Books { get; set; }
+}]]>
+            </Code>
+        </Snippet>
+    </CodeSnippet>
+    <CodeSnippet Format="1.0.0">
+        <Header>
+            <Title>Book Entity</Title>
+        </Header>
+        <Snippet>
+            <Code Language="CSharp">
+                <![CDATA[public class Book
+{
+    public int BookID { get; set; }
+
+    [Required]
+    [MaxLength(200)]
+    public string Title { get; set; }
+
+    [Required]
+    [MaxLength(50)]
+    public string ISBN { get; set; }
+
+    public int GenreID { get; set; }
+
+    [MaxLength(2)]
+    public string Language { get; set; }
+
+    [Required]
+    public Genre Genre { get; set; }
+
+    public List<BookAuthor> Authors { get; set; }
+}]]>
+            </Code>
+        </Snippet>
+    </CodeSnippet>
+    <CodeSnippet Format="1.0.0">
+        <Header>
+            <Title>Author Entity</Title>
+        </Header>
+        <Snippet>
+            <Code Language="CSharp">
+                <![CDATA[public class Author
+{
+    public int AuthorID { get; set; }
+
+    [Required]
+    [MaxLength(100)]
+    public string AuthorName { get; set; }
+
+    [MaxLength(2)]
+    public string Nationality { get; set; }
+
+    public List<BookAuthor> Books { get; set; }
+}]]>
+            </Code>
+        </Snippet>
+    </CodeSnippet>
+    <CodeSnippet Format="1.0.0">
+        <Header>
+            <Title>BookAuthor Entity</Title>
+        </Header>
+        <Snippet>
+            <Code Language="CSharp">
+                <![CDATA[// Note that we create an entity that represents the many-to-many relationship
+// between books and authors. See BookDataContext.OnModelCreating for code that
+// configures this entity.
+
+/*
+    *  +-------------+         +-------------+         +-------------+
+    *  |             |         |             |         |             |
+    *  |    Book     + 1 --- m + BookAuthor  + m --- 1 +    Author   |
+    *  |             |         |             |         |             |
+    *  +-------------+         +-------------+         +-------------+
+    */
+
+public class BookAuthor
+{
+    public int BookID { get; set; }
+
+    [Required]
+    public Book Book { get; set; }
+
+    public int AuthorID { get; set; }
+
+    [Required]
+    public Author Author { get; set; }
+}]]>
+            </Code>
+        </Snippet>
+    </CodeSnippet>
+    <CodeSnippet Format="1.0.0">
+        <Header>
+            <Title>BookDataContext</Title>
+        </Header>
+        <Snippet>
+            <Code Language="CSharp">
+                <![CDATA[public class BookDataContext : DbContext
+{
+    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+    {
+        // Note that this time we play with SQLite. You can find a browser
+        // at https://sqlitebrowser.org/dl/.
+        var dbFileName = Path.Combine(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), "mydb.db");
+        optionsBuilder.UseSqlite($"Data Source={dbFileName};");
+    }
+
+    public DbSet<Book> Books { get; set; }
+
+    public DbSet<Author> Authors { get; set; }
+
+    public DbSet<BookAuthor> BookAuthors { get; set; }
+
+    public DbSet<Genre> Genre { get; set; }
+}]]>
+            </Code>
+        </Snippet>
+    </CodeSnippet>
+    <CodeSnippet Format="1.0.0">
+        <Header>
+            <Title>OnModelCreating</Title>
+        </Header>
+        <Snippet>
+            <Code Language="CSharp">
+                <![CDATA[// Many-to-many entity has a multi-part key
+modelBuilder.Entity<BookAuthor>()
+    .HasKey(ba => new { ba.AuthorID, ba.BookID });
+
+// Define foreign keys to book and author
+modelBuilder.Entity<Book>()
+    .HasMany(b => b.Authors)
+    .WithOne(b => b.Book);
+modelBuilder.Entity<Author>()
+    .HasMany(b => b.Books)
+    .WithOne(b => b.Author);
+
+// Note how we create unique indexes
+modelBuilder.Entity<Genre>()
+    .HasIndex(g => g.GenreTitle)
+    .IsUnique();
+modelBuilder.Entity<Book>()
+    .HasIndex(b => b.ISBN)
+    .IsUnique();]]>
+            </Code>
+        </Snippet>
+    </CodeSnippet>
+</CodeSnippets>

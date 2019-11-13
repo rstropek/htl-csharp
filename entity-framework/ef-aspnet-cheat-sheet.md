@@ -5,7 +5,9 @@
 
 * [Documentation...](https://docs.microsoft.com/en-us/ef/core/get-started/)
 
-* Install EF Tools globally: `dotnet tool install --global dotnet-ef`
+* Install EF Tools globally
+  * `dotnet tool install --global dotnet-ef`
+  * Update with `dotnet tool update --global dotnet-ef` (add `--version 3.1.0-preview...` to install a prerelease)
 * `dotnet add package Microsoft.EntityFrameworkCore.SqlServer`
   * [Choose your DB provider...](https://docs.microsoft.com/en-us/ef/core/providers/)
 * `dotnet add package Microsoft.EntityFrameworkCore.Design`
