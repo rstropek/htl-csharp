@@ -11,7 +11,7 @@
 | 28.11. | renestadler          | Why should you read: Ready Player One by Ernest Cline              |
 | 12.12. | Philipp Brandstetter | Cool things you can do with dnSpy                                  |
 | 09.01. | Thomas Brych         | Cool things you can do with Postman                                |
-| 16.01. | Michael Hitzker      | What are SonarQube and SonarLint?                                  |
+| 16.01. | Michael Hitzker      | What can we learn from stackoverflow's IT-Recruiter Report for searching our first jobs in IT?|
 | 30.01. | Tim Klecka           | Developing in the GitHub Flow                                      |
 | 06.02. |                      |                                                                    |
 | 27.02. | Peter Leitner        | Free development tools every .NET developer should know about      |
