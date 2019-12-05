@@ -13,7 +13,7 @@
 | 09.01. | Thomas Brych         | Cool things you can do with Postman                                |
 | 16.01. | Michael Hitzker      | What are SonarQube and SonarLint?                                  |
 | 30.01. | Tim Klecka           | Developing in the GitHub Flow                                      |
-| 06.02. |                      |                                                                    |
+| 06.02. | Markus Kurzmann      | Why is Json.NET so important when building modern, service-oriented applications?|
 | 27.02. | Peter Leitner        | Free development tools every .NET developer should know about      |
 | 05.03. | Felix Leibetseder    | Free web services every .NET developer should know about           |
 | 12.03. |                      |                                                                    |
