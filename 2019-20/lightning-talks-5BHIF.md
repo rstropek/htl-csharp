@@ -11,6 +11,7 @@
 | 28.11. | renestadler          | Why should you read: Ready Player One by Ernest Cline              |
 | 12.12. | Philipp Brandstetter | Cool things you can do with dnSpy                                  |
 | 09.01. | Thomas Brych         | Cool things you can do with Postman                                |
+|        | Stefan Daniel        | Cool things you can do with Fiddler                                |
 | 16.01. | Michael Hitzker      | What are SonarQube and SonarLint?                                  |
 | 30.01. | Tim Klecka           | Developing in the GitHub Flow                                      |
 | 06.02. |                      |                                                                    |
