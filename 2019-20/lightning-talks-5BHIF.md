@@ -14,7 +14,7 @@
 |        | Stefan Daniel        | Cool things you can do with Fiddler                                |
 | 16.01. | Michael Hitzker      | What can we learn from stackoverflow's IT-Recruiter Report for searching our first jobs in IT? |
 | 30.01. | Tim Klecka           | Developing in the GitHub Flow                                      |
-| 06.02. |                      |                                                                    |
+| 06.02. | Markus Kurzmann      | Why is Json.NET so important when building modern, service-oriented applications?|
 | 27.02. | Peter Leitner        | Free development tools every .NET developer should know about      |
 | 05.03. | Felix Leibetseder    | Free web services every .NET developer should know about           |
 | 12.03. |                      |                                                                    |
