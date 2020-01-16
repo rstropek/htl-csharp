@@ -21,5 +21,5 @@
 | 12.03. | Patrick W.      | F#                                                                                                          |
 | 19.03. | Christina L.    |                                                                                                             |
 | 26.03. | Samuel Lange    | Clean Code                                                                                                  |
-| 23.04. |                 |                                                                                                             |
+| 23.04. | Life 3.0        |                                                                                                             |
 | 30.04. |                 |                                                                                                             |
