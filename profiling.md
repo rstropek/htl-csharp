@@ -9,7 +9,7 @@ Optimizing C# Applications
 * Customer satisfaction
   * Customers report performance problems
   * Reduce churn rate
-  * Tip: Ask you users if they are leaving because of poor performance
+  * Tip: Ask your users if they are leaving because of poor performance
 * Raise conversion rate
   * Consider the first impression potential users have from your software
   * Tip: Ask your users why they are not buying
