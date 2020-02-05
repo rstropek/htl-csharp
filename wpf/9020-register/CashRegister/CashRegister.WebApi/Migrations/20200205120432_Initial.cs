@@ -1,7 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore.Metadata;
+﻿using System;
 using Microsoft.EntityFrameworkCore.Migrations;
-using System;
-using System.Collections.Generic;
 
 namespace CashRegister.WebApi.Migrations
 {
@@ -14,7 +12,7 @@ namespace CashRegister.WebApi.Migrations
                 columns: table => new
                 {
                     ID = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                        .Annotation("SqlServer:Identity", "1, 1"),
                     ProductName = table.Column<string>(nullable: false),
                     UnitPrice = table.Column<decimal>(nullable: false)
                 },
@@ -28,7 +26,7 @@ namespace CashRegister.WebApi.Migrations
                 columns: table => new
                 {
                     ID = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                        .Annotation("SqlServer:Identity", "1, 1"),
                     ReceiptTimestamp = table.Column<DateTime>(nullable: false),
                     TotalPrice = table.Column<decimal>(nullable: false)
                 },
@@ -42,11 +40,11 @@ namespace CashRegister.WebApi.Migrations
                 columns: table => new
                 {
                     ID = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    ProductID = table.Column<int>(nullable: false),
                     Amount = table.Column<int>(nullable: false),
-                    ProductID = table.Column<int>(nullable: true),
-                    ReceiptID = table.Column<int>(nullable: true),
-                    TotalPrice = table.Column<decimal>(nullable: false)
+                    TotalPrice = table.Column<decimal>(nullable: false),
+                    ReceiptID = table.Column<int>(nullable: true)
                 },
                 constraints: table =>
                 {
@@ -56,7 +54,7 @@ namespace CashRegister.WebApi.Migrations
                         column: x => x.ProductID,
                         principalTable: "Products",
                         principalColumn: "ID",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
                         name: "FK_ReceiptLines_Receipts_ReceiptID",
                         column: x => x.ReceiptID,

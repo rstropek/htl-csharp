@@ -9,10 +9,11 @@ using Microsoft.EntityFrameworkCore;
 
 namespace CashRegister.WebApi.Controllers
 {
+    [ApiController]
     [Route("api/receipts")]
-    public class ReceiptsController : Controller
+    public class ReceiptsController : ControllerBase
     {
-        private CashRegisterDataContext DataContext;
+        private readonly CashRegisterDataContext DataContext;
 
         public ReceiptsController(CashRegisterDataContext dataContext)
         {

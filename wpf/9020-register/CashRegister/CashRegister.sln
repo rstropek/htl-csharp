@@ -1,13 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.27520.0
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29521.150
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CashRegister.WebApi", "CashRegister.WebApi\CashRegister.WebApi.csproj", "{0B5B2F8A-BAEF-4856-A654-386070023DFB}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CashRegister.Shared", "CashRegister.Shared\CashRegister.Shared.csproj", "{CCC60518-0D34-4ED0-AC8E-1D6241A6C321}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CashRegister.UI", "CashRegister.UI\CashRegister.UI.csproj", "{9CF9EF15-7071-425A-8259-735F92D0C977}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CashRegister.UICore", "CashRegister.UICore\CashRegister.UICore.csproj", "{13F869AE-DC7A-4396-8851-80085D9E9361}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,10 +23,10 @@ Global
 		{CCC60518-0D34-4ED0-AC8E-1D6241A6C321}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CCC60518-0D34-4ED0-AC8E-1D6241A6C321}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CCC60518-0D34-4ED0-AC8E-1D6241A6C321}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9CF9EF15-7071-425A-8259-735F92D0C977}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9CF9EF15-7071-425A-8259-735F92D0C977}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9CF9EF15-7071-425A-8259-735F92D0C977}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9CF9EF15-7071-425A-8259-735F92D0C977}.Release|Any CPU.Build.0 = Release|Any CPU
+		{13F869AE-DC7A-4396-8851-80085D9E9361}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{13F869AE-DC7A-4396-8851-80085D9E9361}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{13F869AE-DC7A-4396-8851-80085D9E9361}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{13F869AE-DC7A-4396-8851-80085D9E9361}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

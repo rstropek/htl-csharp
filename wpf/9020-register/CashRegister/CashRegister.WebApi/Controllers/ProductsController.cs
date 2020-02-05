@@ -7,10 +7,11 @@ using Microsoft.EntityFrameworkCore;
 
 namespace CashRegister.WebApi.Controllers
 {
+    [ApiController]
     [Route("api/products")]
-    public class ProductsController : Controller
+    public class ProductsController : ControllerBase
     {
-        private CashRegisterDataContext DataContext;
+        private readonly CashRegisterDataContext DataContext;
 
         // Note the use of constructor injection to get the data context
         public ProductsController(CashRegisterDataContext dataContext)

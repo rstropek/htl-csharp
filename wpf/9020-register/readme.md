@@ -34,15 +34,15 @@ We want to build a WPF frontend with an ASP.NET Core Web API in the backend. The
   * Proposed solution name: *CashRegister*
   * Proposed project name: *CashRegister.WebApi*
 
-* Create a new *WPF App (.NET Framework)* project to your solution
-  * Proposed project name: *CashRegister.UI*
+* Create a new *WPF App (.NET Core)* project to your solution
+  * Proposed project name: *CashRegister.UICore*
 
 * Add a new *Class Library (.NET Standard)* project to your solution
   * Proposed project name: *CashRegister.Shared*
 
 * Create the dependencies between your projects
   * Create a dependency from *CashRegister.WebApi* to *CashRegister.Shared*
-  * Create a dependency from *CashRegister.UI* to *CashRegister.Shared*
+  * Create a dependency from *CashRegister.UICore* to *CashRegister.Shared*
   * Create a dependency from *CashRegister.Tests* to *CashRegister.Shared*
 
 * Add the necessary NuGet packages for Entity Framework Core to the *CashRegister.WebApi* project according to your [EF cheat sheet](https://github.com/rstropek/htl-csharp/blob/master/entity-framework/ef-aspnet-cheat-sheet.md)
@@ -50,7 +50,7 @@ We want to build a WPF frontend with an ASP.NET Core Web API in the backend. The
 * Add the following NuGet package to your WPF project:
   * *Newtonsoft.Json*: Powerful library for handling JSON
   * *Polly*: Powerful library for retry policies (e.g. if network connection is shaky)
-  * *Prism.Core*: Useful helper classes for implementing [MVVM (*Model View ViewModel*)](http://prismlibrary.github.io/docs/wpf/Implementing-MVVM.html)
+  * *Prism.Core*: Useful helper classes for implementing [MVVM (*Model View ViewModel*)](https://prismlibrary.com/docs/commanding.html)
 
 ### Create the Model
 
@@ -59,24 +59,43 @@ For our cash register, we need products, receipts and receipt lines. Here are pr
 ```cs
 public class Product
 {
+    [JsonPropertyName("id")]
     public int ID { get; set; }
+
+    [JsonPropertyName("productName")]
     public string ProductName { get; set; }
+
+    [JsonPropertyName("unitPrice")]
     public decimal UnitPrice { get; set; }
 }
 
 public class ReceiptLine
 {
+    [JsonPropertyName("id")]
     public int ID { get; set; }
+
+    [JsonPropertyName("product")]
     public Product Product { get; set; }
+
+    [JsonPropertyName("amount")]
     public int Amount { get; set; }
+
+    [JsonPropertyName("totalPrice")]
     public decimal TotalPrice { get; set; }
 }
 
 public class Receipt
 {
+    [JsonPropertyName("id")]
     public int ID { get; set; }
+
+    [JsonPropertyName("receiptTimestamp")]
     public DateTime ReceiptTimestamp { get; set; }
+
+    [JsonPropertyName("receiptLines")]
     public List<ReceiptLine> ReceiptLines { get; set; }
+
+    [JsonPropertyName("totalPrice")]
     public decimal TotalPrice { get; set; }
 }
 ```
@@ -133,10 +152,11 @@ public class Receipt
   * Optional *query parameter* for filtering products based on the product name (e.g. `/api/products?nameFilter=Bana`)
 
     ```cs
+    [ApiController]
     [Route("api/[controller]")]
-    public class ProductsController : Controller
+    public class ProductsController : ControllerBase
     {
-        private CashRegisterDataContext DataContext;
+        private readonly CashRegisterDataContext DataContext;
 
         public ProductsController(CashRegisterDataContext dataContext)
         {
@@ -229,7 +249,7 @@ Now the backend is done. Make sure to test it with an interactive client like *P
     ```cs
     public partial class MainWindow : Window
     {
-        private MainWindowViewModel ViewModel;
+        private readonly MainWindowViewModel ViewModel;
 
         public MainWindow()
         {
@@ -304,7 +324,7 @@ Now the backend is done. Make sure to test it with an interactive client like *P
     public decimal TotalSum => Basket.Sum(rl => rl.TotalPrice);
     ```
 
-* Last but not least we need two *Commands* (*add item to shopping basket*, and *checkout*) that the buttons can trigger when pressed. The *Prism* library gives us a [helper class for commands named `DelegateCommand`](http://prismlibrary.github.io/docs/wpf/Implementing-MVVM.html#implementing-command-objects). A delegate command is representing a function that should be called when the button is pressed *and* an *execution state*. If the *execution state* is `false`, the command cannot be called and WPF will *automatically disable the bound button*. If it is `true`, the button is enabled.
+* Last but not least we need two *Commands* (*add item to shopping basket*, and *checkout*) that the buttons can trigger when pressed. The *Prism* library gives us a [helper class for commands named `DelegateCommand`](https://prismlibrary.com/docs/commanding.html). A delegate command is representing a function that should be called when the button is pressed *and* an *execution state*. If the *execution state* is `false`, the command cannot be called and WPF will *automatically disable the bound button*. If it is `true`, the button is enabled.
 
     ```cs
     // The command takes an integer input parameter because it receives the
@@ -323,12 +343,12 @@ Here is the code for the view. Note that the code contains a lot of comments. Ma
 ```xml
 <!-- Note the `d:DataContext` attribute. It will give you IntelliSense by looking
      at your view model during design time. -->
-<Window x:Class="CashRegister.UI.MainWindow"
+<Window x:Class="CashRegister.UICore.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:CashRegister.UI"
+        xmlns:local="clr-namespace:CashRegister.UICore"
         mc:Ignorable="d"
         d:DataContext="{d:DesignInstance Type=local:MainWindowViewModel, IsDesignTimeCreatable=False}"
         Title="Cash Register Exercise" Height="700" Width="1000">
@@ -437,7 +457,7 @@ Now we have to implement the logic in our view model.
     // Add a HttpClient instance that we can use to access our backend Web API
     private HttpClient HttpClient = new HttpClient
     {
-        BaseAddress = new Uri("http://localhost:55495"),
+        BaseAddress = new Uri("http://localhost:5000"),
         Timeout = TimeSpan.FromSeconds(5)
     };
     ```
@@ -483,7 +503,7 @@ Now we have to implement the logic in our view model.
         // case of shaky networks.
         var productsString = await RetryPolicy.ExecuteAndCaptureAsync(
             async () => await HttpClient.GetStringAsync("/api/products"));
-        Products = JsonConvert.DeserializeObject<ObservableCollection<Product>>(productsString.Result);
+        Products = JsonSerializer.Deserialize<ObservableCollection<Product>>(productsString.Result);
     }
     ```
 
@@ -543,7 +563,7 @@ Now we have to implement the logic in our view model.
         }).ToList();
 
         // Create JSON content that can be sent using HTTP POST
-        using (var content = new StringContent(JsonConvert.SerializeObject(dto), Encoding.UTF8, "application/json"))
+        using (var content = new StringContent(JsonSerializer.Serialize(dto), Encoding.UTF8, "application/json"))
         {
             // Send the receipt to the backend
             var response = await RetryPolicy.ExecuteAndCaptureAsync(async () => await HttpClient.PostAsync("/api/receipts2", content));
