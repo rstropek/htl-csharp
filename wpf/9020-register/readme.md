@@ -535,6 +535,7 @@ Now we have to implement the logic in our view model.
             // Product already in the basket -> add amount and total price
             basketItem.Amount++;
             basketItem.TotalPrice += product.UnitPrice;
+            RaisePropertyChanged(nameof(TotalSum));
         }
         else
         {
