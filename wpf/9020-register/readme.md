@@ -489,7 +489,7 @@ Now we have to implement the logic in our view model.
 * With the *Polly* library, we can define a retry policy that we use whenever we access a Web API that might fail.
 
     ```cs
-    private Policy RetryPolicy = Policy.Handle<HttpRequestException>().RetryAsync(5);
+    private readonly AsyncPolicy RetryPolicy = Policy.Handle<HttpRequestException>().RetryAsync(5);
     ```
 
 * Next, we create an initialization function that loads products from our backend.
@@ -535,6 +535,7 @@ Now we have to implement the logic in our view model.
             // Product already in the basket -> add amount and total price
             basketItem.Amount++;
             basketItem.TotalPrice += product.UnitPrice;
+            RaisePropertyChanged(nameof(TotalSum));
         }
         else
         {
