@@ -18,7 +18,7 @@
 | 06.02. | Daniel Hofer    |                                                                                                             |
 | 27.02. | Jakob Aschauer  | What is Roslyn?                                                                                             |
 | 05.03. | Katrin H.       | What are Microsoft's Framework Design Guidelines and what can we learn from them?                           |
-| 12.03. | Patrick W.      | F#                                                                                                          |
+| 12.03. | Patrick W.      | Rust                                                                                                          |
 | 19.03. | Christina L.    |                                                                                                             |
 | 26.03. | Samuel Lange    | Clean Code                                                                                                  |
 | 23.04. | Jona Maiss      | Life 3.0                                                                                                    |
