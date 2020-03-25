@@ -1,0 +1,15 @@
+GET http://localhost:5000/api/todoItems
+
+###
+POST http://localhost:5000/api/todoItems
+Content-Type: application/json
+
+{
+    "description": "Homework"
+}
+
+###
+GET http://localhost:5000/api/todoItems/b1a4325b-532b-44e1-aab6-fbe3387f5264
+
+###
+DELETE http://localhost:5000/api/todoItems/b1a4325b-532b-44e1-aab6-fbe3387f5264
