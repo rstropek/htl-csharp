@@ -91,7 +91,7 @@ public class Startup
     {
         ...
         services.AddDbContext<AddressBookContext>(options => options.UseSqlServer(
-            configuration["ConnectionStrings:DefaultConnection"]));
+            Configuration["ConnectionStrings:DefaultConnection"]));
         ...
     }
 
