@@ -1,0 +1,8 @@
+.vs
+packages
+./**/bin
+./**/obj
+TestResults
+Dockerfile
+TaxiManager.UI
+
