@@ -7,7 +7,7 @@
 
   <ItemGroup>
     <PackageReference Include="Newtonsoft.Json">
-      <Version>10.0.3</Version>
+      <Version>13.0.2</Version>
     </PackageReference>
     <PackageReference Include="SixLabors.ImageSharp.Drawing">
       <Version>1.0.0-beta0001</Version>
